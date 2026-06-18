@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Экипаж — Apollo 11 Archive</title>
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="logo">Apollo 11 Archive</div>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a class="active" href="crew.html">Экипаж</a></li>
+          <li><a href="tech.html">Характеристики</a></li>
+          <li><a href="gallery.html">Галерея</a></li>
+          <li><a href="logs.html">Журнал логов</a></li>
+          <li><a href="about.html">О проекте</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="crew-hero" aria-labelledby="crew-main-title">
+      <div class="container">
+        <h1 id="crew-main-title">Экипаж миссии Apollo 11</h1>
+        <p class="section-lead">Короткие биографии ключевых участников миссии.</p>
+      </div>
+    </section>
+
+    <section class="crew-grid-section" aria-labelledby="crew-grid-title">
+      <div class="container">
+        <h2 id="crew-grid-title" class="visually-hidden">Сетка экипажа</h2>
+
+        <div class="crew-grid">
+          <article class="crew-card" tabindex="0">
+            <figure>
+              <img src="images/Armstrong.jpg" alt="Нил Армстронг">
+              <figcaption>Нил Армстронг</figcaption>
+            </figure>
+            <h2>Нил Армстронг</h2>
+            <h3>Командир</h3>
+            <p>Командир миссии Apollo 11, совершил первый в истории человечества шаг по поверхности Луны.</p>
+          </article>
+
+          <article class="crew-card" tabindex="0">
+            <figure>
+              <img src="images/Aldrin.jpg" alt="Базз Олдрин">
+              <figcaption>Базз Олдрин</figcaption>
+            </figure>
+            <h2>Базз Олдрин</h2>
+            <h3>Пилот лунного модуля</h3>
+            <p>Пилот лунного модуля «Орел», осуществлял выходы на поверхность и научные наблюдения.</p>
+          </article>
+
+          <article class="crew-card" tabindex="0">
+            <figure>
+              <img src="images/Collins.jpg" alt="Майкл Коллинз">
+              <figcaption>Майкл Коллинз</figcaption>
+            </figure>
+            <h2>Майкл Коллинз</h2>
+            <h3>Пилот командного модуля</h3>
+            <p>Оставался на орбите Луны, обеспечивая оперативную поддержку и стыковку.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <small>© 1969–2026 Apollo 11 Archive — учебный проект.</small>
+    </div>
+  </footer>
+</body>
+</html>
