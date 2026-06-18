@@ -272,6 +272,13 @@ img, picture, video { max-width:100%; display:block; }
 }
 .gallery-grid figure{ margin:0; background:#05060a; border-radius:8px; overflow:hidden; padding:0.5rem; }
 .gallery-grid figcaption{ color:var(--muted); font-size:0.9rem; padding:0.4rem 0 0; }
+.gallery-grid img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:6px;
+  object-fit:cover;
+}
 
 /* Logs */
 .log-excerpt{ margin-top:0.5rem; background:linear-gradient(180deg, rgba(255,255,255,0.006), rgba(255,255,255,0.002)); padding:1rem; border-radius:8px; }
