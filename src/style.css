@@ -489,3 +489,56 @@ body,html{ overflow-x:hidden; }
 /* Larger default image heights for better visibility */
 .crew-card img{ height:220px; }
 
+/* Logs page — transcript styles */
+.transcript{
+  list-style:none;
+  margin:1.5rem 0;
+  padding:0;
+}
+.transcript dt{
+  font-family:var(--mono);
+  font-size:0.95rem;
+  font-weight:700;
+  color:var(--accent);
+  margin-top:1.25rem;
+  margin-bottom:0.4rem;
+}
+.transcript dt:first-child{
+  margin-top:0;
+}
+.transcript dd{
+  margin:0 0 0 1rem;
+  padding:0.75rem 0 0.75rem 1rem;
+  border-left:3px solid;
+  color:var(--text);
+  line-height:1.6;
+  font-size:0.98rem;
+  letter-spacing:0.01em;
+}
+.transcript dd.houston{
+  border-left-color:#5A6770;
+  background:rgba(90,103,112,0.05);
+}
+.transcript dd.eagle{
+  border-left-color:var(--accent);
+  background:rgba(102,252,241,0.03);
+}
+.transcript time{
+  font-family:var(--mono);
+  color:var(--muted);
+  font-size:0.88rem;
+  display:inline-block;
+  margin-right:0.5rem;
+}
+.transcript mark{
+  background:rgba(102,252,241,0.12);
+  color:var(--accent);
+  padding:0.1em 0.3em;
+  border-radius:3px;
+  font-weight:500;
+}
+.logs-hero{ padding:1.5rem 0 0.5rem 0; }
+.logs-hero .section-lead{ margin-top:0.5rem; color:var(--muted); }
+.logs-section{ padding:1.5rem 0; }
+.intro-text{ max-width:72ch; margin:0 0 1.5rem 0; color:var(--text); opacity:0.95; font-size:1rem; }
+
