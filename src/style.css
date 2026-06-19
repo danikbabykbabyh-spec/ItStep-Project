@@ -399,6 +399,40 @@ body,html{ overflow-x:hidden; }
 .crew-hero{ padding:1.5rem 0 0.5rem 0; }
 .crew-hero .section-lead{ margin-top:0.5rem; color:var(--muted); }
 
+/* Tech page — tables and figures */
+.table-responsive{
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  margin:1rem 0 1.5rem 0;
+}
+.tech-table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:520px;
+}
+.tech-table th,
+.tech-table td{
+  padding:0.8rem 0.9rem;
+  text-align:left;
+  font-family:var(--mono);
+  color:var(--text);
+  border-bottom:1px solid #1F2833;
+  font-size:0.98rem;
+}
+.tech-table th{
+  color:var(--accent);
+  font-weight:700;
+  background:transparent;
+}
+.tech-table tbody tr:nth-child(even){
+  background:#1F2833;
+}
+.tech-table tbody tr:hover{
+  background:rgba(102,252,241,0.06);
+}
+.figure-placeholder svg{ display:block; width:100%; height:auto; border-radius:8px; }
+.figure-placeholder figcaption{ margin-top:0.5rem; color:var(--muted); font-family:var(--mono); }
+
 .crew-grid{
   display:grid;
   grid-template-columns:1fr;
