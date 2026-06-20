@@ -7,23 +7,33 @@
     <meta name="theme-color" content="#0B0C10">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Страница не найдена — Apollo 11 Archive</title>
+    <title>Страница потеряна в космосе — Apollo 11 Archive</title>
     <style media="screen">
       :root {
         --bg: #0B0C10;
+        --bg-gradient: radial-gradient(circle at 50% -20%, #1A2634 0%, #0B0C10 80%);
+        --surface: rgba(255, 255, 255, 0.03);
+        --border: rgba(102, 252, 241, 0.15);
         --text: #C5C6C7;
-        --muted: #9AA0A6;
+        --text-heading: #FFFFFF;
+        --muted: #8A929A;
         --accent: #66FCF1;
-        --accent-2: #FF8A42;
+        --accent-hover: #45E8D9;
+        --glow: rgba(102, 252, 241, 0.4);
       }
 
       @media (prefers-color-scheme: light) {
         :root {
-          --bg: #FFFFFF;
-          --text: #1F2833;
-          --muted: #555555;
+          --bg: #F4F7F6;
+          --bg-gradient: radial-gradient(circle at 50% -20%, #E0E8E7 0%, #F4F7F6 80%);
+          --surface: #FFFFFF;
+          --border: rgba(0, 137, 123, 0.2);
+          --text: #2C3539;
+          --text-heading: #1F2833;
+          --muted: #6B7782;
           --accent: #00897B;
-          --accent-2: #FF5722;
+          --accent-hover: #00695C;
+          --glow: rgba(0, 137, 123, 0.3);
         }
       }
 
@@ -33,133 +43,160 @@
       }
 
       body { 
-        background: var(--bg); 
+        background-color: var(--bg); 
+        background-image: var(--bg-gradient);
         color: var(--text); 
         font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
         margin: 0; 
         padding: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        -webkit-text-size-adjust: 100%;
       }
 
       #message { 
-        background: var(--bg);
-        max-width: 520px; 
-        margin: 3rem auto 1rem; 
-        padding: 2rem;
-        border-radius: 12px;
-        border: 1px solid rgba(102,252,241,0.1);
+        background: var(--surface);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        max-width: 540px; 
+        width: 90%;
+        padding: 3rem;
+        border-radius: 16px;
+        border: 1px solid var(--border);
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
       }
 
-      #message h1 { 
-        font-size: 2.5rem; 
-        font-weight: 700; 
-        color: var(--accent); 
-        margin: 0 0 0.5rem 0;
-        letter-spacing: 0.02em;
+      /* Декоративная линия сверху карточки */
+      #message::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: var(--accent);
+        box-shadow: 0 0 15px var(--glow);
       }
 
       #message h2 { 
         color: var(--accent); 
+        font-weight: 800; 
+        font-size: 6rem; 
+        margin: 0;
+        line-height: 1;
+        letter-spacing: -0.05em;
+        text-shadow: 0 0 25px var(--glow);
+      }
+
+      #message h1 { 
+        font-size: 1.75rem; 
         font-weight: 700; 
-        font-size: 1rem; 
-        margin: 0 0 1rem 0;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
+        color: var(--text-heading); 
+        margin: 1rem 0 0.5rem 0;
+        letter-spacing: 0.02em;
       }
 
       #message p { 
         line-height: 1.6; 
         margin: 1rem 0; 
-        font-size: 1rem;
+        font-size: 1.05rem;
         color: var(--text);
-        opacity: 0.95;
       }
 
       #message a { 
-        display: inline-block; 
-        text-align: center; 
+        display: inline-flex; 
+        align-items: center;
+        justify-content: center;
         background: var(--accent); 
         color: var(--bg); 
         text-decoration: none; 
-        padding: 0.75rem 1.5rem;
-        border-radius: 6px;
-        font-weight: 600;
-        transition: transform 220ms ease, box-shadow 220ms ease;
-        min-height: 44px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        padding: 0.85rem 2rem;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 1rem;
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         margin-top: 1.5rem;
-        -webkit-user-select: none;
-        user-select: none;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        box-shadow: 0 4px 15px var(--glow);
       }
 
       #message a:hover,
       #message a:focus {
-        transform: translateY(-2px);
-        box-shadow: 0 12px 24px rgba(102,252,241,0.15);
+        transform: translateY(-3px);
+        background: var(--accent-hover);
+        box-shadow: 0 8px 25px var(--glow);
         outline: none;
       }
 
-      #message a:focus {
-        outline: 3px solid rgba(102,252,241,0.12);
-        outline-offset: 3px;
+      #message a:active {
+        transform: translateY(0);
+      }
+
+      .footer-note {
+        margin-top: 3rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--border);
+        text-align: left;
+      }
+
+      .footer-note h3 {
+        font-size: 0.85rem; 
+        color: var(--muted); 
+        margin: 0 0 0.5rem 0;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .footer-note p {
+        font-size: 0.9rem; 
+        color: var(--muted);
+        margin: 0;
       }
 
       code {
-        background: rgba(102,252,241,0.08);
+        background: rgba(102,252,241,0.1);
         color: var(--accent);
         padding: 0.2em 0.4em;
-        border-radius: 3px;
+        border-radius: 4px;
         font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
         font-size: 0.9em;
       }
 
-      #load { 
-        color: var(--muted); 
-        text-align: center; 
-        font-size: 0.9rem;
-        opacity: 0.7;
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        * {
-          transition: none !important;
-          animation: none !important;
-        }
-
-        #message a:hover,
-        #message a:focus {
-          transform: none;
-        }
+      @media (prefers-color-scheme: light) {
+        code { background: rgba(0, 137, 123, 0.1); }
+        #message { box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.05); }
       }
 
       @media (max-width: 600px) {
-        #message { 
-          margin: 1.5rem 1rem; 
-          padding: 1.5rem;
-        }
+        #message { padding: 2rem 1.5rem; }
+        #message h2 { font-size: 4.5rem; }
+        #message h1 { font-size: 1.5rem; }
+      }
 
-        #message h1 {
-          font-size: 2rem;
-        }
-
-        body {
-          border-top: 4px solid var(--accent);
-        }
+      @media (prefers-reduced-motion: reduce) {
+        * { transition: none !important; }
+        #message a:hover { transform: none; }
       }
     </style>
   </head>
   <body>
     <div id="message">
       <h2>404</h2>
-      <h1>Страница не найдена</h1>
-      <p>Указанный файл не найден на этом сайте. Проверьте правильность URL и попробуйте снова.</p>
-      <a href="index.html">Вернуться на главную</a>
-      <h3 style="font-size: 1rem; color: var(--muted); margin-top: 2rem;">Почему я вижу эту страницу?</h3>
-      <p style="font-size: 0.95rem; opacity: 0.8;">Эта страница была создана автоматически. Для изменения отредактируйте файл <code>404.html</code> в папке <code>public</code> проекта.</p>
+      <h1>Хьюстон, у нас проблема</h1>
+      <p>Связь с этой страницей потеряна. Возможно, модуль отклонился от заданного курса, или файл был навсегда удален из архива.</p>
+      <a href="index.html">Вернуться на базу</a>
+      
+      <div class="footer-note">
+        <h3>Системное сообщение</h3>
+        <p>Эта страница сгенерирована автоматически. Для изменения конфигурации отредактируйте файл <code>404.html</code> в директории <code>public</code>.</p>
+      </div>
     </div>
   </body>
 </html>
