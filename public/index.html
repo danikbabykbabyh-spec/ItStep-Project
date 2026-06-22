@@ -3,23 +3,29 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="color-scheme" content="light dark" />
-  <meta name="theme-color" content="#0B0C10" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#050508" />
+  <meta name="description" content="Apollo 11 Archive — полная хронология, экипаж, технические характеристики и логи миссии 1969 года." />
   <title>Хронология миссии Apollo 11 — Apollo 11 Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="src/style.css">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="favicon.ico" sizes="any">
-  <link rel="apple-touch-icon" href="favicon.svg">
+  <link rel="icon" href="Favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="Favicon.ico" sizes="any">
 </head>
 <body>
+
+  <!-- CSS-only burger toggle -->
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+
   <header class="site-header" role="banner">
     <div class="container header-inner">
-      <div class="logo" aria-hidden="false">Apollo 11 Archive</div>
+      <a class="logo" href="index.html">Apollo<span> 11</span> Archive</a>
+
       <nav class="site-nav" aria-label="Основная навигация">
         <ul>
-          <li><a href="index.html">Главная</a></li>
+          <li><a class="active" href="index.html" aria-current="page">Главная</a></li>
           <li><a href="crew.html">Экипаж</a></li>
           <li><a href="tech.html">Характеристики</a></li>
           <li><a href="gallery.html">Галерея</a></li>
@@ -27,28 +33,87 @@
           <li><a href="about.html">О проекте</a></li>
         </ul>
       </nav>
+
+      <label for="nav-toggle" class="burger" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </label>
     </div>
   </header>
 
+  <!-- Mobile drawer -->
+  <nav class="nav-drawer" aria-label="Мобильная навигация">
+    <ul>
+      <li><a class="active" href="index.html">Главная</a></li>
+      <li><a href="crew.html">Экипаж</a></li>
+      <li><a href="tech.html">Характеристики</a></li>
+      <li><a href="gallery.html">Галерея</a></li>
+      <li><a href="logs.html">Журнал логов</a></li>
+      <li><a href="about.html">О проекте</a></li>
+    </ul>
+  </nav>
+
   <main>
+
+    <!-- ── Hero ── -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="container">
-        <h1 id="hero-title">Хронология миссии Apollo 11</h1>
-        <h2 class="hero-sub">Первое высадка человека на Луну — шаг в историю науки и техники</h2>
+        <div class="hero-badge">🚀 Миссия Apollo 11 · 1969</div>
+        <h1 id="hero-title">
+          Первый шаг<br><em>на Луне</em>
+        </h1>
+        <p class="hero-sub">16–24 июля 1969 · Sea of Tranquility · NASA</p>
         <p class="lead">
-          Apollo 11 — кульминация космической эры: миллионы строк инженерных решений, часы смелых решений и беспримерный коллективный труд.
-          В этом архиве собраны ключевые этапы миссии в хронологическом порядке.
+          Apollo 11 — кульминация космической эры: миллионы строк инженерных решений,
+          часы решений под давлением и беспримерный коллективный труд человечества.
+          В этом архиве собраны ключевые этапы миссии.
         </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="crew.html">Экипаж миссии</a>
+          <a class="btn btn-ghost" href="logs.html">Журнал логов</a>
+        </div>
       </div>
     </section>
 
+    <!-- ── Stats ── -->
+    <section class="stats-section" aria-labelledby="stats-title">
+      <div class="container">
+        <p class="section-tag">Ключевые параметры</p>
+        <h2 id="stats-title" class="section-title">Цифры миссии</h2>
+
+        <div class="stats-grid">
+          <article class="glass-card stat-card">
+            <div class="stat-icon">⏱</div>
+            <h3>8д 3ч</h3>
+            <p>Продолжительность</p>
+          </article>
+          <article class="glass-card stat-card">
+            <div class="stat-icon">👨‍🚀</div>
+            <h3>3</h3>
+            <p>Члена экипажа</p>
+          </article>
+          <article class="glass-card stat-card">
+            <div class="stat-icon">🌕</div>
+            <h3>Mare<br>Tranquil.</h3>
+            <p>Место посадки</p>
+          </article>
+          <article class="glass-card stat-card">
+            <div class="stat-icon">🚀</div>
+            <h3>Saturn V</h3>
+            <p>Ракета-носитель</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Crew ── -->
     <section class="crew-section" aria-labelledby="crew-title">
       <div class="container">
-        <h2 id="crew-title">Экипаж</h2>
-        <p class="section-lead">Команда миссии Apollo 11 — опытные астронавты, каждый со своей ролью и вкладом в успех полёта.</p>
+        <p class="section-tag">Люди</p>
+        <h2 id="crew-title" class="section-title">Экипаж</h2>
+        <p class="section-lead">Три астронавта, которые изменили историю человечества.</p>
 
         <div class="crew-list">
-          <article class="crew-member">
+          <article class="glass-card crew-member">
             <figure>
               <img src="images/Armstrong.jpg" alt="Нил Армстронг" loading="lazy">
               <figcaption>Нил Армстронг — командир</figcaption>
@@ -56,7 +121,7 @@
             <p>Командир корабля, совершил исторический первый шаг на Луне.</p>
           </article>
 
-          <article class="crew-member">
+          <article class="glass-card crew-member">
             <figure>
               <img src="images/Aldrin.jpg" alt="Базз Олдрин" loading="lazy">
               <figcaption>Базз Олдрин — пилот лунного модуля</figcaption>
@@ -64,70 +129,50 @@
             <p>Провёл работы на поверхности Луны: сбор образцов, установка приборов.</p>
           </article>
 
-          <article class="crew-member">
+          <article class="glass-card crew-member">
             <figure>
               <img src="images/Collins.jpg" alt="Майкл Коллинз" loading="lazy">
               <figcaption>Майкл Коллинз — пилот командного модуля</figcaption>
             </figure>
-            <p>Остался на орбите Луны, обеспечивая связь и безопасность возвращения экипажа.</p>
+            <p>Остался на орбите, обеспечивая связь и безопасность возвращения.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="stats-section" aria-labelledby="stats-title">
+    <!-- ── Gallery preview ── -->
+    <section class="gallery-section" aria-labelledby="gallery-prev-title">
       <div class="container">
-        <h2 id="stats-title">Ключевые параметры миссии</h2>
-        <div class="stats-grid">
-          <article class="stat-card">
-            <h3>Продолжительность</h3>
-            <p>8 дней, 3 часа, 18 минут</p>
-          </article>
-          <article class="stat-card">
-            <h3>Команда</h3>
-            <p>3 человека</p>
-          </article>
-          <article class="stat-card">
-            <h3>Место посадки</h3>
-            <p>Море Спокойствия</p>
-          </article>
-          <article class="stat-card">
-            <h3>Ракета</h3>
-            <p>Saturn V</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="gallery-section" aria-labelledby="gallery-title">
-      <div class="container">
-        <h2 id="gallery-title">Галерея — отрывки</h2>
-        <p class="section-lead">Небольшая подборка исторических кадров и схем из публичных архивов.</p>
+        <p class="section-tag">Фотоархив</p>
+        <h2 id="gallery-prev-title" class="section-title">Галерея — отрывки</h2>
+        <p class="section-lead">Исторические кадры и схемы из публичных архивов NASA.</p>
 
         <div class="gallery-grid">
           <figure>
-            <img src="images/Appolo-11-module.jpg" alt="Посадочный модуль Apollo 11">
+            <img src="images/Appolo-11-module.jpg" alt="Посадочный модуль Apollo 11" loading="lazy">
             <figcaption>Схема посадочного модуля</figcaption>
           </figure>
 
           <figure>
-            <img src="images/Saturn-V.jpg" alt="Запуск ракеты Saturn V">
+            <img src="images/Saturn-V.jpg" alt="Запуск ракеты Saturn V" loading="lazy">
             <figcaption>Кадр запуска Saturn V</figcaption>
           </figure>
 
           <figure>
-            <img src="images/Trajectory%20diagram.jpg" alt="Схема траектории полёта">
+            <img src="images/Trajectory diagram.jpg" alt="Схема траектории полёта" loading="lazy">
             <figcaption>Схема траектории</figcaption>
           </figure>
         </div>
       </div>
     </section>
 
-    <section class="logs-section" aria-labelledby="logs-title">
+    <!-- ── Logs excerpt ── -->
+    <section class="logs-section" aria-labelledby="log-title">
       <div class="container">
-        <h2 id="logs-title">Журнал логов — фрагты</h2>
-        <article class="log-excerpt">
-          <h3>Ключевой фрагмент: посадка</h3>
+        <p class="section-tag">Радиопереговоры</p>
+        <h2 id="log-title" class="section-title">Журнал логов — фрагмент</h2>
+        <article class="log-excerpt glass-card">
+          <h3>Ключевой момент: посадка</h3>
           <blockquote>
             «…120 секунд до посадки; высота 15 метров; скорость снижения контролируется экипажем; приоритет — безопасность посадки.»
           </blockquote>
@@ -136,49 +181,54 @@
       </div>
     </section>
 
+    <!-- ── Timeline ── -->
     <section class="timeline-section" aria-labelledby="timeline-title">
       <div class="container">
-        <h2 id="timeline-title">Хронология</h2>
+        <p class="section-tag">Хронология</p>
+        <h2 id="timeline-title" class="section-title">Ключевые события</h2>
 
         <div class="timeline" role="list">
-          <article class="timeline-item" role="listitem">
+          <article class="glass-card timeline-item" role="listitem">
             <time datetime="1969-07-16" class="t-date">16 июля 1969</time>
             <h3>Запуск — старт миссии</h3>
-            <p>Ракета-носитель Saturn V вывела корабль Apollo 11 на орбиту, начав путешествие к Луне.</p>
+            <p>Saturn V вывела корабль Apollo 11 на орбиту, начав путешествие к Луне.</p>
           </article>
 
-          <article class="timeline-item" role="listitem">
+          <article class="glass-card timeline-item" role="listitem">
             <time datetime="1969-07-19" class="t-date">19 июля 1969</time>
             <h3>Транс-лунная инъекция</h3>
-            <p>Корректировка траектории и выход на транс-лунную траекторию, направляющую корабль к Луне.</p>
+            <p>Корректировка траектории и выход на транс-лунный курс.</p>
           </article>
 
-          <article class="timeline-item" role="listitem">
+          <article class="glass-card timeline-item" role="listitem">
             <time datetime="1969-07-20" class="t-date">20 июля 1969</time>
-            <h3>Вхождение на лунную орбиту и посадка</h3>
-            <p>Модуль «Орел» отделился и совершил посадку в районе Моря Спокойствия.</p>
+            <h3>Вхождение на орбиту и посадка</h3>
+            <p>Модуль «Орёл» отделился и совершил посадку в Море Спокойствия.</p>
           </article>
 
-          <article class="timeline-item" role="listitem">
+          <article class="glass-card timeline-item" role="listitem">
             <time datetime="1969-07-21" class="t-date">21 июля 1969</time>
-            <h3>Первый выход на поверхность Луны</h3>
-            <p>Нил Армстронг и Базз Олдрин провели историческую прогулку по лунной поверхности.</p>
+            <h3>Первый выход на поверхность</h3>
+            <p>Нил Армстронг и Базз Олдрин провели историческую прогулку по Луне.</p>
           </article>
 
-          <article class="timeline-item" role="listitem">
+          <article class="glass-card timeline-item" role="listitem">
             <time datetime="1969-07-24" class="t-date">24 июля 1969</time>
             <h3>Возвращение на Землю</h3>
-            <p>Команда благополучно приводнилась в Тихом океане; миссия успешно завершена.</p>
+            <p>Команда приводнилась в Тихом океане. Миссия успешно завершена.</p>
           </article>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer" role="contentinfo">
     <div class="container">
+      <span class="footer-logo">Apollo 11 Archive</span>
       <small>© 1969–2026 Apollo 11 Archive — учебный проект.</small>
     </div>
   </footer>
+
 </body>
 </html>

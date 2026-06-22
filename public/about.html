@@ -3,20 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="color-scheme" content="light dark" />
-  <meta name="theme-color" content="#0B0C10" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#050508" />
+  <meta name="description" content="О проекте Apollo 11 Archive — учебный архив исторических материалов." />
   <title>О проекте — Apollo 11 Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="src/style.css">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="favicon.ico" sizes="any">
-  <link rel="apple-touch-icon" href="favicon.svg">
+  <link rel="icon" href="Favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="Favicon.ico" sizes="any">
 </head>
 <body>
+
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+
   <header class="site-header" role="banner">
     <div class="container header-inner">
-      <div class="logo">Apollo 11 Archive</div>
+      <a class="logo" href="index.html">Apollo<span> 11</span> Archive</a>
       <nav class="site-nav" aria-label="Основная навигация">
         <ul>
           <li><a href="index.html">Главная</a></li>
@@ -24,17 +28,33 @@
           <li><a href="tech.html">Характеристики</a></li>
           <li><a href="gallery.html">Галерея</a></li>
           <li><a href="logs.html">Журнал логов</a></li>
-          <li><a class="active" href="about.html">О проекте</a></li>
+          <li><a class="active" href="about.html" aria-current="page">О проекте</a></li>
         </ul>
       </nav>
+      <label for="nav-toggle" class="burger" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </label>
     </div>
   </header>
 
+  <nav class="nav-drawer" aria-label="Мобильная навигация">
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="crew.html">Экипаж</a></li>
+      <li><a href="tech.html">Характеристики</a></li>
+      <li><a href="gallery.html">Галерея</a></li>
+      <li><a href="logs.html">Журнал логов</a></li>
+      <li><a class="active" href="about.html">О проекте</a></li>
+    </ul>
+  </nav>
+
   <main>
+
     <section class="about-hero" aria-labelledby="about-title">
       <div class="container">
+        <p class="section-tag">Информация</p>
         <h1 id="about-title">О проекте</h1>
-        <p class="section-lead">Информация об архиве и способ связи с редакцией.</p>
+        <p class="section-lead">Apollo 11 Archive — цифровой архив исторических материалов о первой лунной миссии человечества.</p>
       </div>
     </section>
 
@@ -42,10 +62,14 @@
       <div class="container">
         <h2 id="about-project">Оцифрованная история</h2>
         <p>
-          Apollo 11 Archive — учебный проект, посвящённый цифровой архивации исторических материалов о миссии Apollo 11. Цель проекта — сохранить и сделать доступной информацию о первой высадке человека на Луну, включая биографии членов экипажа, технические характеристики оборудования, а также ключевые моменты радиопереговоров между Центром управления в Хьюстоне и космическими аппаратами.
+          Apollo 11 Archive — учебный проект, посвящённый цифровой архивации исторических материалов о миссии Apollo 11.
+          Цель проекта — сохранить и сделать доступной информацию о первой высадке человека на Луну, включая биографии
+          членов экипажа, технические характеристики оборудования и ключевые фрагменты радиопереговоров.
         </p>
         <p>
-          Проект реализован с использованием чистого HTML5 и CSS3 без сторонних фреймворков, что обеспечивает быстрое отображение, лёгкое обслуживание и полную доступность (A11y). Все материалы отобраны из общественных источников и исторических архивов.
+          Проект реализован с использованием чистого HTML5 и CSS3 без сторонних фреймворков и без JavaScript,
+          что обеспечивает быстрое отображение, лёгкое обслуживание и полную доступность. Все материалы отобраны
+          из общественных источников и исторических архивов NASA.
         </p>
         <p>
           <strong>Автор:</strong> ItStep Academy (учебный проект, 2026).
@@ -61,17 +85,19 @@
           <li><a href="https://history.nasa.gov/" target="_blank" rel="noopener">NASA History Program</a> — исторические документы и архивы.</li>
           <li><a href="https://www.jpl.nasa.gov/" target="_blank" rel="noopener">NASA Jet Propulsion Laboratory</a> — технические спецификации и фото.</li>
           <li><a href="https://www.apolloarchive.com/" target="_blank" rel="noopener">Apollo Archive</a> — архив фотографий миссии Apollo 11.</li>
-          <li><a href="https://www.hq.nasa.gov/office/pao/History/SP-4029/" target="_blank" rel="noopener">NASA Technical Reports Server</a> — технические отчёты и документация.</li>
           <li><a href="https://www.si.edu/" target="_blank" rel="noopener">Smithsonian Institution</a> — исторические материалы и артефакты.</li>
         </ul>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer" role="contentinfo">
     <div class="container">
+      <span class="footer-logo">Apollo 11 Archive</span>
       <small>© 1969–2026 Apollo 11 Archive — учебный проект.</small>
     </div>
   </footer>
+
 </body>
 </html>

@@ -3,96 +3,143 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="color-scheme" content="light dark" />
-  <meta name="theme-color" content="#0B0C10" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#050508" />
+  <meta name="description" content="Журнал радиопереговоров при посадке Apollo 11 на Луну — 20 июля 1969 года." />
   <title>Журнал переговоров — Apollo 11 Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="src/style.css">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="favicon.ico" sizes="any">
-  <link rel="apple-touch-icon" href="favicon.svg">
+  <link rel="icon" href="Favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="Favicon.ico" sizes="any">
 </head>
 <body>
+
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+
   <header class="site-header" role="banner">
     <div class="container header-inner">
-      <div class="logo">Apollo 11 Archive</div>
+      <a class="logo" href="index.html">Apollo<span> 11</span> Archive</a>
       <nav class="site-nav" aria-label="Основная навигация">
         <ul>
           <li><a href="index.html">Главная</a></li>
           <li><a href="crew.html">Экипаж</a></li>
           <li><a href="tech.html">Характеристики</a></li>
           <li><a href="gallery.html">Галерея</a></li>
-          <li><a class="active" href="logs.html">Журнал логов</a></li>
+          <li><a class="active" href="logs.html" aria-current="page">Журнал логов</a></li>
           <li><a href="about.html">О проекте</a></li>
         </ul>
       </nav>
+      <label for="nav-toggle" class="burger" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </label>
     </div>
   </header>
 
+  <nav class="nav-drawer" aria-label="Мобильная навигация">
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="crew.html">Экипаж</a></li>
+      <li><a href="tech.html">Характеристики</a></li>
+      <li><a href="gallery.html">Галерея</a></li>
+      <li><a class="active" href="logs.html">Журнал логов</a></li>
+      <li><a href="about.html">О проекте</a></li>
+    </ul>
+  </nav>
+
   <main>
+
     <section class="logs-hero" aria-labelledby="logs-title">
       <div class="container">
+        <p class="section-tag">Архив NASA · 20 июля 1969</p>
         <h1 id="logs-title">Журнал переговоров: Высадка</h1>
-        <p class="section-lead">Ключевые фрагменты радиопереговоров между Центром управления в Хьюстоне и модулем «Орел» при спуске на поверхность Луны.</p>
+        <p class="section-lead">Ключевые фрагменты радиопереговоров между Центром управления в Хьюстоне и модулем «Орёл» при спуске на поверхность Луны.</p>
       </div>
     </section>
 
     <section class="logs-section" aria-labelledby="logs-content">
       <div class="container">
         <p id="logs-content" class="intro-text">
-          <mark>20 июля 1969 года</mark> — исторический день, когда человек впервые ступил на поверхность Луны. Ниже представлена выборка переговоров, отражающих напряжение, профессионализм и решительность астронавтов при посадке модуля на поверхность Луны.
+          <mark>20 июля 1969 года</mark> — исторический день, когда человек впервые ступил на поверхность Луны. Ниже представлена выборка переговоров, отражающих напряжение, профессионализм и решительность астронавтов при посадке.
         </p>
 
         <dl class="transcript">
-          <dt><time datetime="1969-07-20T20:05:00Z">20:05 МСК</time> Хьюстон</dt>
+          <dt>
+            <time datetime="1969-07-20T20:05:00Z">20:05 МСК</time>
+            Хьюстон
+          </dt>
           <dd class="houston">
-            Орел, это Хьюстон. Вас слышим. Высота 500 футов, скорость снижения хорошая.
+            Орёл, это Хьюстон. Вас слышим. Высота 500 футов, скорость снижения хорошая.
           </dd>
 
-          <dt><time datetime="1969-07-20T20:06:00Z">20:06 МСК</time> Орел (Армстронг)</dt>
+          <dt>
+            <time datetime="1969-07-20T20:06:00Z">20:06 МСК</time>
+            Орёл (Армстронг)
+          </dt>
           <dd class="eagle">
             Копируем, Хьюстон. Снижаемся, все системы в норме. <mark>Видим лунную поверхность</mark>.
           </dd>
 
-          <dt><time datetime="1969-07-20T20:07:00Z">20:07 МСК</time> Хьюстон</dt>
+          <dt>
+            <time datetime="1969-07-20T20:07:00Z">20:07 МСК</time>
+            Хьюстон
+          </dt>
           <dd class="houston">
-            Орел, давайте помедленнее. Следите за горюючим. У вас остаётся примерно 2 минуты до минимума.
+            Орёл, давайте помедленнее. Следите за горючим. У вас остаётся примерно 2 минуты до минимума.
           </dd>
 
-          <dt><time datetime="1969-07-20T20:08:00Z">20:08 МСК</time> Орел (Армстронг)</dt>
+          <dt>
+            <time datetime="1969-07-20T20:08:00Z">20:08 МСК</time>
+            Орёл (Армстронг)
+          </dt>
           <dd class="eagle">
             Хьюстон, контрольный свет горючего включился. Требуется посадка в течение одной минуты, иначе придётся абортировать.
           </dd>
 
-          <dt><time datetime="1969-07-20T20:09:00Z">20:09 МСК</time> Хьюстон</dt>
+          <dt>
+            <time datetime="1969-07-20T20:09:00Z">20:09 МСК</time>
+            Хьюстон
+          </dt>
           <dd class="houston">
-            Орел, <mark>продолжайте спуск</mark>. Время ещё есть. Все системы работают нормально.
+            Орёл, <mark>продолжайте спуск</mark>. Время ещё есть. Все системы работают нормально.
           </dd>
 
-          <dt><time datetime="1969-07-20T20:10:00Z">20:10 МСК</time> Орел (Олдрин)</dt>
+          <dt>
+            <time datetime="1969-07-20T20:10:00Z">20:10 МСК</time>
+            Орёл (Олдрин)
+          </dt>
           <dd class="eagle">
             Контакт… контакт! Маячки горючего включены. Скорость вниз 2 фута в секунду.
           </dd>
 
-          <dt><time datetime="1969-07-20T20:11:00Z">20:11 МСК</time> Орел (Армстронг)</dt>
+          <dt>
+            <time datetime="1969-07-20T20:11:00Z">20:11 МСК</time>
+            Орёл (Армстронг)
+          </dt>
           <dd class="eagle">
             <mark>Спокойно, спускаемся</mark>. Выключаю двигатель. Модуль на поверхности.
           </dd>
 
-          <dt><time datetime="1969-07-20T20:17:00Z">20:17 МСК</time> Хьюстон</dt>
+          <dt>
+            <time datetime="1969-07-20T20:17:00Z">20:17 МСК</time>
+            Хьюстон
+          </dt>
           <dd class="houston">
-            Орел, Хьюстон. Подтверждаем: вы на поверхности Луны. Вся планета вас слышит! Отличная работа!
+            Орёл, Хьюстон. Подтверждаем: вы на поверхности Луны. Вся планета вас слышит! Отличная работа!
           </dd>
         </dl>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer" role="contentinfo">
     <div class="container">
+      <span class="footer-logo">Apollo 11 Archive</span>
       <small>© 1969–2026 Apollo 11 Archive — учебный проект.</small>
     </div>
   </footer>
+
 </body>
 </html>

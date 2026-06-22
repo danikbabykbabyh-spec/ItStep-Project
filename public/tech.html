@@ -3,52 +3,73 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="color-scheme" content="light dark" />
-  <meta name="theme-color" content="#0B0C10" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#050508" />
+  <meta name="description" content="Технические характеристики ракеты Saturn V и лунного модуля Орёл." />
   <title>Технические спецификации — Apollo 11 Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="src/style.css">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="favicon.ico" sizes="any">
-  <link rel="apple-touch-icon" href="favicon.svg">
+  <link rel="icon" href="Favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="Favicon.ico" sizes="any">
 </head>
 <body>
+
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+
   <header class="site-header" role="banner">
     <div class="container header-inner">
-      <div class="logo">Apollo 11 Archive</div>
+      <a class="logo" href="index.html">Apollo<span> 11</span> Archive</a>
       <nav class="site-nav" aria-label="Основная навигация">
         <ul>
           <li><a href="index.html">Главная</a></li>
           <li><a href="crew.html">Экипаж</a></li>
-          <li><a class="active" href="tech.html">Характеристики</a></li>
+          <li><a class="active" href="tech.html" aria-current="page">Характеристики</a></li>
           <li><a href="gallery.html">Галерея</a></li>
           <li><a href="logs.html">Журнал логов</a></li>
           <li><a href="about.html">О проекте</a></li>
         </ul>
       </nav>
+      <label for="nav-toggle" class="burger" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </label>
     </div>
   </header>
 
+  <nav class="nav-drawer" aria-label="Мобильная навигация">
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="crew.html">Экипаж</a></li>
+      <li><a class="active" href="tech.html">Характеристики</a></li>
+      <li><a href="gallery.html">Галерея</a></li>
+      <li><a href="logs.html">Журнал логов</a></li>
+      <li><a href="about.html">О проекте</a></li>
+    </ul>
+  </nav>
+
   <main>
+
     <section class="tech-hero" aria-labelledby="tech-title">
       <div class="container">
+        <p class="section-tag">Инженерия</p>
         <h1 id="tech-title">Технические спецификации</h1>
-        <p class="section-lead">Краткий обзор ключевых характеристик ракеты-носителя и лунного модуля.</p>
+        <p class="section-lead">Краткий обзор ключевых характеристик ракеты-носителя Saturn V и лунного модуля «Орёл».</p>
       </div>
     </section>
 
     <section class="saturn-section" aria-labelledby="saturn-title">
       <div class="container">
-        <h2 id="saturn-title">Ракета-носитель "Сатурн-V"</h2>
+        <p class="section-tag">Ракета-носитель</p>
+        <h2 id="saturn-title" class="section-title">Saturn V</h2>
 
         <figure class="figure-placeholder">
-          <img src="images/Saturn_V_cutaway.jpg" alt="Разрез Saturn V — схема" width="100%">
+          <img src="images/Saturn_V_cutaway.jpg" alt="Разрез Saturn V — схема" loading="lazy">
           <figcaption>Ракета-носитель Saturn V — конструктивная схема</figcaption>
         </figure>
 
         <div class="table-responsive">
-          <table class="tech-table" summary="Характеристики ракеты Saturn V">
+          <table class="tech-table" aria-label="Характеристики ракеты Saturn V">
             <thead>
               <tr>
                 <th scope="col">Параметр</th>
@@ -56,22 +77,12 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">Ступени</th>
-                <td>3</td>
-              </tr>
-              <tr>
-                <th scope="row">Масса (стартовая)</th>
-                <td>~2 970 000 кг</td>
-              </tr>
-              <tr>
-                <th scope="row">Тяга (общая на старте)</th>
-                <td>~34 020 кН</td>
-              </tr>
-              <tr>
-                <th scope="row">Длина</th>
-                <td>110.6 м</td>
-              </tr>
+              <tr><th scope="row">Ступени</th><td>3</td></tr>
+              <tr><th scope="row">Масса (стартовая)</th><td>~2 970 000 кг</td></tr>
+              <tr><th scope="row">Тяга (на старте)</th><td>~34 020 кН</td></tr>
+              <tr><th scope="row">Длина</th><td>110.6 м</td></tr>
+              <tr><th scope="row">Диаметр</th><td>10.1 м</td></tr>
+              <tr><th scope="row">Полезная нагрузка (НОО)</th><td>~130 000 кг</td></tr>
             </tbody>
           </table>
         </div>
@@ -80,15 +91,16 @@
 
     <section class="lm-section" aria-labelledby="lm-title">
       <div class="container">
-        <h2 id="lm-title">Лунный модуль "Орел"</h2>
+        <p class="section-tag">Лунный модуль</p>
+        <h2 id="lm-title" class="section-title">«Орёл»</h2>
 
         <figure class="figure-placeholder">
-          <img src="images/Appolo-11-module.jpg" alt="Лунный модуль Apollo 11" width="100%">
-          <figcaption>Лунный модуль «Орел» — вид спускного и подъёмного блоков</figcaption>
+          <img src="images/Appolo-11-module.jpg" alt="Лунный модуль Apollo 11" loading="lazy">
+          <figcaption>Лунный модуль «Орёл» — вид спускного и подъёмного блоков</figcaption>
         </figure>
 
         <div class="table-responsive">
-          <table class="tech-table" summary="Характеристики лунного модуля">
+          <table class="tech-table" aria-label="Характеристики лунного модуля">
             <thead>
               <tr>
                 <th scope="col">Параметр</th>
@@ -96,29 +108,26 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">Экипаж</th>
-                <td>2 (на поверхности)</td>
-              </tr>
-              <tr>
-                <th scope="row">Масса (общая)</th>
-                <td>~15 200 кг</td>
-              </tr>
-              <tr>
-                <th scope="row">Автономность</th>
-                <td>~48 часов (при штатных ресурсах)</td>
-              </tr>
+              <tr><th scope="row">Экипаж</th><td>2 (на поверхности)</td></tr>
+              <tr><th scope="row">Масса (общая)</th><td>~15 200 кг</td></tr>
+              <tr><th scope="row">Высота</th><td>6.4 м</td></tr>
+              <tr><th scope="row">Диаметр (шасси)</th><td>9.4 м</td></tr>
+              <tr><th scope="row">Автономность</th><td>~48 часов</td></tr>
+              <tr><th scope="row">Время на Луне</th><td>21ч 36мин 21с</td></tr>
             </tbody>
           </table>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer" role="contentinfo">
     <div class="container">
+      <span class="footer-logo">Apollo 11 Archive</span>
       <small>© 1969–2026 Apollo 11 Archive — учебный проект.</small>
     </div>
   </footer>
+
 </body>
 </html>

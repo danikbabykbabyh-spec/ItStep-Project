@@ -3,84 +3,113 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="color-scheme" content="light dark" />
-  <meta name="theme-color" content="#0B0C10" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#050508" />
+  <meta name="description" content="Экипаж миссии Apollo 11 — Нил Армстронг, Базз Олдрин, Майкл Коллинз." />
   <title>Экипаж — Apollo 11 Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="src/style.css">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="favicon.ico" sizes="any">
-  <link rel="apple-touch-icon" href="favicon.svg">
+  <link rel="icon" href="Favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="Favicon.ico" sizes="any">
 </head>
 <body>
+
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+
   <header class="site-header" role="banner">
     <div class="container header-inner">
-      <div class="logo">Apollo 11 Archive</div>
+      <a class="logo" href="index.html">Apollo<span> 11</span> Archive</a>
       <nav class="site-nav" aria-label="Основная навигация">
         <ul>
           <li><a href="index.html">Главная</a></li>
-          <li><a class="active" href="crew.html">Экипаж</a></li>
+          <li><a class="active" href="crew.html" aria-current="page">Экипаж</a></li>
           <li><a href="tech.html">Характеристики</a></li>
           <li><a href="gallery.html">Галерея</a></li>
           <li><a href="logs.html">Журнал логов</a></li>
           <li><a href="about.html">О проекте</a></li>
         </ul>
       </nav>
+      <label for="nav-toggle" class="burger" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </label>
     </div>
   </header>
 
+  <nav class="nav-drawer" aria-label="Мобильная навигация">
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a class="active" href="crew.html">Экипаж</a></li>
+      <li><a href="tech.html">Характеристики</a></li>
+      <li><a href="gallery.html">Галерея</a></li>
+      <li><a href="logs.html">Журнал логов</a></li>
+      <li><a href="about.html">О проекте</a></li>
+    </ul>
+  </nav>
+
   <main>
+
     <section class="crew-hero" aria-labelledby="crew-main-title">
       <div class="container">
-        <h1 id="crew-main-title">Экипаж миссии Apollo 11</h1>
-        <p class="section-lead">Короткие биографии ключевых участников миссии.</p>
+        <p class="section-tag">Люди миссии</p>
+        <h1 id="crew-main-title">Экипаж Apollo 11</h1>
+        <p class="section-lead">Три человека, которые навсегда вписали своё имя в историю — командир, пилот лунного модуля и пилот командного отсека.</p>
       </div>
     </section>
 
-    <section class="crew-grid-section" aria-labelledby="crew-grid-title">
+    <section aria-labelledby="crew-grid-title">
       <div class="container">
         <h2 id="crew-grid-title" class="visually-hidden">Сетка экипажа</h2>
 
         <div class="crew-grid">
-          <article class="crew-card" tabindex="0">
+          <article class="glass-card crew-card" tabindex="0">
             <figure>
-              <img src="images/Armstrong.jpg" alt="Нил Армстронг">
-              <figcaption>Нил Армстронг</figcaption>
+              <img src="images/Armstrong.jpg" alt="Нил Армстронг" loading="lazy">
             </figure>
-            <h2>Нил Армстронг</h2>
-            <h3>Командир</h3>
-            <p>Командир миссии Apollo 11, совершил первый в истории человечества шаг по поверхности Луны.</p>
+            <div class="crew-body">
+              <span class="crew-role">Командир</span>
+              <h2>Нил Армстронг</h2>
+              <h3>Neil Alden Armstrong</h3>
+              <p>Командир миссии Apollo 11. Совершил первый в истории человечества шаг на поверхность Луны 21 июля 1969 года.</p>
+            </div>
           </article>
 
-          <article class="crew-card" tabindex="0">
+          <article class="glass-card crew-card" tabindex="0">
             <figure>
-              <img src="images/Aldrin.jpg" alt="Базз Олдрин">
-              <figcaption>Базз Олдрин</figcaption>
+              <img src="images/Aldrin.jpg" alt="Базз Олдрин" loading="lazy">
             </figure>
-            <h2>Базз Олдрин</h2>
-            <h3>Пилот лунного модуля</h3>
-            <p>Пилот лунного модуля «Орел», осуществлял выходы на поверхность и научные наблюдения.</p>
+            <div class="crew-body">
+              <span class="crew-role">Пилот лунного модуля</span>
+              <h2>Базз Олдрин</h2>
+              <h3>Edwin Eugene Aldrin Jr.</h3>
+              <p>Пилот лунного модуля «Орёл». Выходил на поверхность Луны, проводил научные наблюдения и сбор образцов грунта.</p>
+            </div>
           </article>
 
-          <article class="crew-card" tabindex="0">
+          <article class="glass-card crew-card" tabindex="0">
             <figure>
-              <img src="images/Collins.jpg" alt="Майкл Коллинз">
-              <figcaption>Майкл Коллинз</figcaption>
+              <img src="images/Collins.jpg" alt="Майкл Коллинз" loading="lazy">
             </figure>
-            <h2>Майкл Коллинз</h2>
-            <h3>Пилот командного модуля</h3>
-            <p>Оставался на орбите Луны, обеспечивая оперативную поддержку и стыковку.</p>
+            <div class="crew-body">
+              <span class="crew-role">Пилот командного модуля</span>
+              <h2>Майкл Коллинз</h2>
+              <h3>Michael Collins</h3>
+              <p>Оставался на орбите Луны в командном модуле «Колумбия», обеспечивая оперативную поддержку и стыковку при возвращении.</p>
+            </div>
           </article>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer" role="contentinfo">
     <div class="container">
+      <span class="footer-logo">Apollo 11 Archive</span>
       <small>© 1969–2026 Apollo 11 Archive — учебный проект.</small>
     </div>
   </footer>
+
 </body>
 </html>

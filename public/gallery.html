@@ -1,86 +1,179 @@
 <!doctype html>
 <html lang="ru">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="color-scheme" content="light dark" />
-  <meta name="theme-color" content="#0B0C10" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <title>Историческая фотогалерея — Apollo 11 Archive</title>
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#050508" />
+  <meta name="description" content="Историческая фотогалерея миссии Apollo 11 — снимки NASA." />
+  <title>Фотогалерея — Apollo 11 Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="src/style.css">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="favicon.ico" sizes="any">
-  <link rel="apple-touch-icon" href="favicon.svg">
+  <link rel="icon" href="Favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="Favicon.ico" sizes="any">
 </head>
+
 <body>
+
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+
   <header class="site-header" role="banner">
     <div class="container header-inner">
-      <div class="logo">Apollo 11 Archive</div>
+      <a class="logo" href="index.html">Apollo<span> 11</span> Archive</a>
       <nav class="site-nav" aria-label="Основная навигация">
         <ul>
           <li><a href="index.html">Главная</a></li>
           <li><a href="crew.html">Экипаж</a></li>
           <li><a href="tech.html">Характеристики</a></li>
-          <li><a class="active" href="gallery.html">Галерея</a></li>
+          <li><a class="active" href="gallery.html" aria-current="page">Галерея</a></li>
           <li><a href="logs.html">Журнал логов</a></li>
           <li><a href="about.html">О проекте</a></li>
         </ul>
       </nav>
+      <label for="nav-toggle" class="burger" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </label>
     </div>
   </header>
 
+  <nav class="nav-drawer" aria-label="Мобильная навигация">
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="crew.html">Экипаж</a></li>
+      <li><a href="tech.html">Характеристики</a></li>
+      <li><a class="active" href="gallery.html">Галерея</a></li>
+      <li><a href="logs.html">Журнал логов</a></li>
+      <li><a href="about.html">О проекте</a></li>
+    </ul>
+  </nav>
+
   <main>
+
     <section class="gallery-hero" aria-labelledby="gallery-title">
       <div class="container">
-        <h1 id="gallery-title">Историческая фотогалерея</h1>
-        <p class="section-lead">Подборка ключевых кадров и схем миссии Apollo 11.</p>
+        <p class="section-tag">Фотоархив NASA</p>
+        <h1 id="gallery-title">Историческая галерея</h1>
+        <p class="section-lead">Подборка ключевых кадров и схем миссии Apollo 11. Нажмите на изображение для просмотра.
+        </p>
       </div>
     </section>
 
-    <section class="gallery-grid container" aria-labelledby="gallery-title">
-      <figure>
-        <img src="images/3451-medium.jpg" alt="Нил Армстронг — подготовка">
-        <figcaption>Подготовка к старту — Нил Армстронг</figcaption>
-      </figure>
+    <section class="gallery-section" aria-label="Галерея фотографий">
+      <div class="container">
+        <div class="gallery-grid">
+          <figure>
+            <a href="#lb-1">
+              <img src="images/3451-medium.jpg" alt="Нил Армстронг — подготовка к старту" loading="lazy">
+            </a>
+            <figcaption>Подготовка к старту — Нил Армстронг</figcaption>
+          </figure>
 
-      <figure>
-        <img src="images/Saturn-V.jpg" alt="Запуск Saturn V">
-        <figcaption>Запуск Saturn V</figcaption>
-      </figure>
+          <figure>
+            <a href="#lb-2">
+              <img src="images/Saturn-V.jpg" alt="Запуск Saturn V" loading="lazy">
+            </a>
+            <figcaption>Запуск Saturn V</figcaption>
+          </figure>
 
-      <figure>
-        <img src="images/Collins.jpg" alt="Командный модуль — Майкл Коллинз">
-        <figcaption>Командный модуль</figcaption>
-      </figure>
+          <figure>
+            <a href="#lb-3">
+              <img src="images/Collins.jpg" alt="Командный модуль — Майкл Коллинз" loading="lazy">
+            </a>
+            <figcaption>Командный модуль</figcaption>
+          </figure>
 
-      <figure>
-        <img src="images/Appolo-11-module.jpg" alt="Лунный модуль Орел">
-        <figcaption>Лунный модуль «Орел»</figcaption>
-      </figure>
+          <figure>
+            <a href="#lb-4">
+              <img src="images/Appolo-11-module.jpg" alt="Лунный модуль Орёл" loading="lazy">
+            </a>
+            <figcaption>Лунный модуль «Орёл»</figcaption>
+          </figure>
 
-      <figure>
-        <img src="images/Saturn_V_cutaway.jpg" alt="Разрез Saturn V">
-        <figcaption>Разрез Saturn V — схема</figcaption>
-      </figure>
+          <figure>
+            <a href="#lb-5">
+              <img
+                src="images/Apollo-11-astronaut-Buzz-Aldrin-stands-next-to-a-flag-on-the-moon-on-July-20-1969.-NASA-960x600.jpg"
+                alt="Базз Олдрин — сбор образцов" loading="lazy">
+            </a>
+            <figcaption>Сбор образцов — Базз Олдрин</figcaption>
+          </figure>
 
-      <figure>
-        <img src="images/Apollo-11-astronaut-Buzz-Aldrin-stands-next-to-a-flag-on-the-moon-on-July-20-1969.-NASA-960x600.jpg" alt="Базз Олдрин — сбор образцов">
-        <figcaption>Сбор образцов — Базз Олдрин</figcaption>
-      </figure>
+          <figure>
+            <a href="#lb-6">
+              <img src="images/Trajectory diagram.jpg" alt="Схема траектории полёта" loading="lazy">
+            </a>
+            <figcaption>Схема траектории полёта</figcaption>
+          </figure>
 
-      <figure>
-        <img src="images/Trajectory%20diagram.jpg" alt="Схема траектории">
-        <figcaption>Схема траектории полёта</figcaption>
-      </figure>
-
+          <figure>
+            <a href="#lb-7">
+              <img src="images/Saturn_V_cutaway.jpg" alt="Разрез Saturn V" loading="lazy">
+            </a>
+            <figcaption>Разрез Saturn V — схема</figcaption>
+          </figure>
+        </div>
+      </div>
     </section>
+
   </main>
+
+  <!-- CSS-only Lightboxes (:target) -->
+  <div class="lightbox-item" id="lb-1">
+    <a href="#" class="lightbox-close" aria-label="Закрыть">✕</a>
+    <img src="images/3451-medium.jpg" alt="Подготовка к старту — Нил Армстронг">
+    <p class="lightbox-caption">Подготовка к старту — Нил Армстронг</p>
+  </div>
+
+  <div class="lightbox-item" id="lb-2">
+    <a href="#" class="lightbox-close" aria-label="Закрыть">✕</a>
+    <img src="images/Saturn-V.jpg" alt="Запуск Saturn V">
+    <p class="lightbox-caption">Запуск ракеты Saturn V</p>
+  </div>
+
+  <div class="lightbox-item" id="lb-3">
+    <a href="#" class="lightbox-close" aria-label="Закрыть">✕</a>
+    <img src="images/Collins.jpg" alt="Майкл Коллинз — командный модуль">
+    <p class="lightbox-caption">Майкл Коллинз — командный модуль</p>
+  </div>
+
+  <div class="lightbox-item" id="lb-4">
+    <a href="#" class="lightbox-close" aria-label="Закрыть">✕</a>
+    <img src="images/Appolo-11-module.jpg" alt="Лунный модуль «Орёл»">
+    <p class="lightbox-caption">Лунный модуль «Орёл»</p>
+  </div>
+
+  <div class="lightbox-item" id="lb-5">
+    <a href="#" class="lightbox-close" aria-label="Закрыть">✕</a>
+    <img
+      src="images/Apollo-11-astronaut-Buzz-Aldrin-stands-next-to-a-flag-on-the-moon-on-July-20-1969.-NASA-960x600.jpg"
+      alt="Базз Олдрин — сбор образцов">
+    <p class="lightbox-caption">Базз Олдрин — сбор образцов, 20 июля 1969</p>
+  </div>
+
+  <div class="lightbox-item" id="lb-6">
+    <a href="#" class="lightbox-close" aria-label="Закрыть">✕</a>
+    <img src="images/Trajectory diagram.jpg" alt="Схема траектории полёта">
+    <p class="lightbox-caption">Схема траектории полёта Apollo 11</p>
+  </div>
+
+  <div class="lightbox-item" id="lb-7">
+    <a href="#" class="lightbox-close" aria-label="Закрыть">✕</a>
+    <img src="images/Saturn_V_cutaway.jpg" alt="Разрез Saturn V">
+    <p class="lightbox-caption">Разрез ракеты Saturn V — конструктивная схема</p>
+  </div>
 
   <footer class="site-footer" role="contentinfo">
     <div class="container">
+      <span class="footer-logo">Apollo 11 Archive</span>
       <small>© 1969–2026 Apollo 11 Archive — учебный проект.</small>
     </div>
   </footer>
+
 </body>
+
 </html>
