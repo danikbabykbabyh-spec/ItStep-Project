@@ -1,0 +1,92 @@
+/* ── Gallery ──────────────────────────────────────────────────── */
+.gallery-section { padding: clamp(2.5rem, 6vw, 4.5rem) 0; }
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-grid figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: border-color var(--t2);
+}
+
+.gallery-grid figure:hover { border-color: #3a3a3a; }
+
+.gallery-grid img {
+  width: 100%; height: 200px;
+  object-fit: cover; display: block;
+}
+
+.gallery-grid figcaption {
+  padding: 0.65rem 0.85rem;
+  font-size: 0.8rem;
+  color: var(--text-3);
+  border-top: 1px solid var(--border);
+}
+
+@media (min-width: 700px) {
+  .gallery-grid figure:first-child { grid-column: span 2; }
+  .gallery-grid figure:first-child img { height: 300px; }
+}
+
+/* ── CSS Lightbox ────────────────────────────────────────────── */
+.lightbox-item {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.lightbox-item:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-item img {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: var(--radius);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1rem; right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; height: 40px;
+  background: rgba(255,255,255,0.1);
+  color: var(--text);
+  border-radius: 50%;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: background var(--t1);
+}
+
+.lightbox-close:hover { background: rgba(255,255,255,0.2); }
+
+.lightbox-caption {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+  max-width: 50ch;
+}

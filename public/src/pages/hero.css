@@ -1,0 +1,76 @@
+/* ── Hero ───────────────────────────────────────────────────── */
+.hero {
+  padding: clamp(4rem, 10vw, 7rem) 0 clamp(2.5rem, 6vw, 4rem);
+  text-align: center;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  background: var(--accent-bg);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  font-size: 0.75rem;
+  color: var(--accent);
+  letter-spacing: 0.03em;
+  margin-bottom: 1.25rem;
+}
+
+.hero h1 {
+  font-family: var(--font-head);
+  font-size: clamp(2rem, 5.5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: var(--accent);
+}
+
+.hero-sub {
+  font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+  color: var(--text-3);
+  margin-bottom: 0.75rem;
+}
+
+.lead {
+  max-width: 58ch;
+  margin: 0 auto 2rem;
+  color: var(--text-2);
+  font-size: clamp(0.9rem, 1.8vw, 1rem);
+  line-height: 1.7;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ── Sub-page heroes ─────────────────────────────────────────── */
+.logs-hero, .about-hero, .crew-hero, .tech-hero,
+.gallery-hero { padding: clamp(2.5rem, 6vw, 4rem) 0 0; }
+
+.crew-hero h1, .tech-hero h1, .gallery-hero h1,
+.logs-hero h1, .about-hero h1 {
+  font-family: var(--font-head);
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  line-height: 1.15;
+}
+
+.crew-hero .section-lead, .tech-hero .section-lead,
+.gallery-hero .section-lead, .logs-hero .section-lead,
+.about-hero .section-lead {
+  color: var(--text-2);
+  font-size: 0.95rem;
+  max-width: 55ch;
+}

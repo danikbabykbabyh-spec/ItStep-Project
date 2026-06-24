@@ -1,0 +1,163 @@
+/* ── 404 Error Page ───────────────────────────────────────────── */
+.error-page {
+  position: relative;
+  min-height: calc(100vh - 56px - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.error-container {
+  text-align: center;
+  position: relative;
+}
+
+/* ── Astronaut ───────────────────────────────────────────────── */
+.error-astronaut {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.astronaut-svg {
+  width: 120px;
+  height: auto;
+  opacity: 0.6;
+}
+
+/* ── Error Code ──────────────────────────────────────────────── */
+.error-code {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-bottom: 1.25rem;
+}
+
+.error-digit {
+  font-family: var(--font-head);
+  font-size: clamp(4rem, 12vw, 8rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--text);
+}
+
+.error-zero {
+  color: var(--accent);
+}
+
+/* ── Error Heading & Subtext ─────────────────────────────────── */
+.error-heading {
+  font-family: var(--font-head);
+  font-size: clamp(1.3rem, 3.5vw, 2rem);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.error-sub {
+  max-width: 45ch;
+  margin: 0 auto 1.5rem;
+  color: var(--text-2);
+  font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+  line-height: 1.7;
+}
+
+.error-mono {
+  font-size: 0.85em;
+  color: var(--text-3);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+/* ── Terminal Block ──────────────────────────────────────────── */
+.error-terminal {
+  max-width: 480px;
+  margin: 0 auto 2rem;
+  text-align: left;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.55rem 0.85rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.terminal-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--dot-color);
+  opacity: 0.6;
+}
+
+.terminal-title {
+  margin-left: auto;
+  font-size: 0.65rem;
+  color: var(--text-3);
+  letter-spacing: 0.03em;
+}
+
+.terminal-body {
+  padding: 0.85rem 1rem;
+  font-size: 0.8rem;
+  line-height: 1.8;
+  color: var(--text-2);
+}
+
+.terminal-body p { margin-bottom: 0.2rem; }
+
+.t-prompt { color: var(--accent); font-weight: 600; }
+.t-error { color: #c55; padding-left: 0.85rem; }
+.t-success { color: var(--accent); padding-left: 0.85rem; opacity: 0.7; }
+
+.t-cursor { margin-top: 0.4rem; }
+
+.cursor-blink {
+  color: var(--accent);
+  animation: cursorBlink 1s step-end infinite;
+}
+
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50%     { opacity: 0; }
+}
+
+/* ── CTA ─────────────────────────────────────────────────────── */
+.error-cta {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ── Floating Particles ──────────────────────────────────────── */
+.error-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: var(--text-3);
+  opacity: 0.15;
+  animation: particleDrift var(--dur) ease-in-out var(--delay) infinite alternate;
+}
+
+@keyframes particleDrift {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(calc(var(--size) * 6), calc(var(--size) * -8)); }
+}

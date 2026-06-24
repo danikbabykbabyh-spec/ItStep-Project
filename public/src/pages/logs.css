@@ -1,0 +1,169 @@
+/* ── Logs / Transcript ────────────────────────────────────────── */
+.intro-text {
+  max-width: 65ch;
+  color: var(--text-2);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.intro-text mark,
+.transcript mark {
+  background: var(--accent-bg);
+  color: var(--accent);
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.transcript { margin: 0; padding: 0; }
+
+.transcript dt {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-top: 1.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.transcript dt:first-child { margin-top: 0; }
+
+.transcript time {
+  font-size: 0.75rem;
+  color: var(--text-3);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 0.1rem 0.4rem;
+  border-radius: var(--radius);
+}
+
+.transcript dd {
+  margin: 0 0 0 0.75rem;
+  padding: 0.85rem 1rem;
+  border-left: 2px solid;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--text-2);
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.transcript dd.houston { border-left-color: var(--text-3); }
+.transcript dd.eagle   { border-left-color: var(--accent); }
+
+/* ── Log excerpt (index) ─────────────────────────────────────── */
+.log-excerpt {
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  position: relative;
+  overflow: hidden;
+}
+
+.log-excerpt::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--accent);
+  border-radius: 3px 0 0 3px;
+}
+
+.log-excerpt h3 {
+  font-family: var(--font-head);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.6rem;
+}
+
+.log-excerpt blockquote {
+  margin: 0 0 0.6rem;
+  padding-left: 0.85rem;
+  border-left: 2px solid var(--border);
+  color: var(--text-2);
+  font-style: italic;
+  line-height: 1.7;
+  font-size: 0.9rem;
+}
+
+/* ── Tabs Styling ──────────────────────────────────────────────── */
+.tabs-container {
+  margin-top: 2rem;
+}
+
+.tabs-radio {
+  display: none !important;
+}
+
+.tab-nav {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  overflow-x: auto;
+  scrollbar-width: none; /* Hide scrollbar for clean design */
+}
+
+.tab-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-label {
+  padding: 0.6rem 1.25rem;
+  font-family: var(--font-head);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-3);
+  cursor: pointer;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+}
+
+.tab-label:hover {
+  color: var(--text);
+  background: var(--surface);
+}
+
+/* Connect active state */
+#tab-landing:checked ~ .tab-nav label[for="tab-landing"],
+#tab-eva:checked ~ .tab-nav label[for="tab-eva"],
+#tab-launch:checked ~ .tab-nav label[for="tab-launch"] {
+  color: var(--accent);
+  background: var(--accent-bg);
+  border-color: rgba(99, 222, 219, 0.2);
+}
+
+/* Hide panels by default */
+.tab-panel {
+  display: none;
+  animation: tabFadeIn 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes tabFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Show correct panel */
+#tab-landing:checked ~ .tab-panels .panel-landing,
+#tab-eva:checked ~ .tab-panels .panel-eva,
+#tab-launch:checked ~ .tab-panels .panel-launch {
+  display: block;
+}

@@ -1,0 +1,243 @@
+/* ── Crew ────────────────────────────────────────────────────── */
+.crew-section { padding: clamp(2.5rem, 6vw, 4.5rem) 0; }
+.crew-section .section-lead { margin-bottom: 1.5rem; }
+
+.crew-list, .crew-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.crew-member, .crew-card { padding: 0; overflow: hidden; }
+
+.crew-member figure { margin: 0; overflow: hidden; }
+.crew-member figure img {
+  width: 100%; height: 220px;
+  object-fit: cover; display: block;
+}
+.crew-member figure figcaption {
+  display: block;
+  padding: 0.65rem 1rem 0;
+  font-size: 0.75rem;
+  color: var(--accent);
+  letter-spacing: 0.03em;
+}
+.crew-member > p {
+  padding: 0.3rem 1rem 1rem;
+  font-size: 0.9rem;
+  color: var(--text-2);
+  line-height: 1.6;
+}
+
+.crew-card {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--t2) var(--ease), border-color var(--t2) var(--ease), box-shadow var(--t2) var(--ease);
+}
+
+.crew-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.crew-card figure { margin: 0; overflow: hidden; }
+.crew-card figure img {
+  width: 100%; height: 240px;
+  object-fit: cover; display: block;
+  transition: transform var(--t2) var(--ease);
+}
+
+.crew-card:hover figure img {
+  transform: scale(1.03);
+}
+
+.crew-card figure figcaption { display: none; }
+
+.crew-body { padding: 1rem 1.25rem; }
+
+.crew-role {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border-radius: 100px;
+  padding: 0.15rem 0.55rem;
+  margin-bottom: 0.5rem;
+}
+
+.crew-body h2 {
+  font-family: var(--font-head);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+
+.crew-body h3 {
+  font-size: 0.8rem;
+  color: var(--text-3);
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.crew-body p {
+  font-size: 0.9rem;
+  color: var(--text-2);
+  line-height: 1.6;
+}
+
+/* ── Crew Modals ────────────────────────────────────────────── */
+.crew-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 250;
+  background: rgba(5, 5, 8, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--t2) var(--ease);
+}
+
+.crew-modal:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.crew-modal-container {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  max-width: 760px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  transform: translateY(20px);
+  transition: transform var(--t2) var(--ease);
+}
+
+.crew-modal:target .crew-modal-container {
+  transform: translateY(0);
+}
+
+.crew-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 0.95rem;
+  z-index: 10;
+  transition: background var(--t1), border-color var(--t1);
+}
+
+.crew-modal-close:hover {
+  background: var(--border);
+  border-color: var(--accent);
+}
+
+.crew-modal-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.crew-modal-image {
+  flex: 0 0 280px;
+  max-width: 280px;
+  border-right: 1px solid var(--border);
+  background: #000;
+}
+
+.crew-modal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.crew-modal-info {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+.crew-modal-info h2 {
+  font-family: var(--font-head);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0.25rem 0 0.5rem;
+  color: var(--text);
+}
+
+.crew-modal-info h3 {
+  font-size: 1rem;
+  color: var(--text-3);
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.crew-modal-dates {
+  font-size: 0.85rem;
+  color: var(--text-2);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.crew-modal-bio {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.crew-modal-bio p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-2);
+}
+
+/* Responsive styles for modal */
+@media (max-width: 768px) {
+  .crew-modal-content {
+    flex-direction: column;
+  }
+  
+  .crew-modal-image {
+    flex: none;
+    max-width: 100%;
+    width: 100%;
+    height: 240px;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .crew-modal-info {
+    padding: 1.5rem;
+    max-height: 60vh;
+  }
+  
+  .crew-modal-info h2 {
+    font-size: 1.5rem;
+  }
+}
+

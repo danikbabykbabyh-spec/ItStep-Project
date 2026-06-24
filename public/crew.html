@@ -9,7 +9,7 @@
   <title>Экипаж — Apollo 11 Archive</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="src/style.css">
   <link rel="icon" href="Favicon.svg" type="image/svg+xml">
   <link rel="icon" href="Favicon.ico" sizes="any">
@@ -63,7 +63,7 @@
         <h2 id="crew-grid-title" class="visually-hidden">Сетка экипажа</h2>
 
         <div class="crew-grid">
-          <article class="glass-card crew-card" tabindex="0">
+          <a href="#modal-armstrong" class="glass-card crew-card">
             <figure>
               <img src="images/Armstrong.jpg" alt="Нил Армстронг" loading="lazy">
             </figure>
@@ -73,9 +73,9 @@
               <h3>Neil Alden Armstrong</h3>
               <p>Командир миссии Apollo 11. Совершил первый в истории человечества шаг на поверхность Луны 21 июля 1969 года.</p>
             </div>
-          </article>
+          </a>
 
-          <article class="glass-card crew-card" tabindex="0">
+          <a href="#modal-aldrin" class="glass-card crew-card">
             <figure>
               <img src="images/Aldrin.jpg" alt="Базз Олдрин" loading="lazy">
             </figure>
@@ -85,9 +85,9 @@
               <h3>Edwin Eugene Aldrin Jr.</h3>
               <p>Пилот лунного модуля «Орёл». Выходил на поверхность Луны, проводил научные наблюдения и сбор образцов грунта.</p>
             </div>
-          </article>
+          </a>
 
-          <article class="glass-card crew-card" tabindex="0">
+          <a href="#modal-collins" class="glass-card crew-card">
             <figure>
               <img src="images/Collins.jpg" alt="Майкл Коллинз" loading="lazy">
             </figure>
@@ -97,17 +97,96 @@
               <h3>Michael Collins</h3>
               <p>Оставался на орбите Луны в командном модуле «Колумбия», обеспечивая оперативную поддержку и стыковку при возвращении.</p>
             </div>
-          </article>
+          </a>
         </div>
       </div>
     </section>
+
+    <!-- Модальные окна с подробной информацией -->
+    <div class="crew-modal" id="modal-armstrong" role="dialog" aria-modal="true" aria-labelledby="modal-armstrong-title">
+      <div class="crew-modal-container">
+        <a href="#crew-grid-title" class="crew-modal-close" aria-label="Закрыть">✕</a>
+        <div class="crew-modal-content">
+          <div class="crew-modal-image">
+            <img src="images/Armstrong.jpg" alt="Нил Армстронг">
+          </div>
+          <div class="crew-modal-info">
+            <span class="crew-role">Командир</span>
+            <h2 id="modal-armstrong-title">Нил Армстронг</h2>
+            <h3>Neil Alden Armstrong</h3>
+            <p class="crew-modal-dates"><strong>Годы жизни:</strong> 5 августа 1930 — 25 августа 2012</p>
+            <div class="crew-modal-bio">
+              <p>Американский астронавт НАСА, лётчик-испытатель, космический инженер и профессор. Стал первым человеком, ступившим на поверхность Луны 21 июля 1969 года в рамках лунной миссии «Аполлон-11».</p>
+              <p>Прежде чем стать астронавтом, Армстронг служил офицером в Военно-морских силах США и принимал участие в Корейской войне. После военной службы работал гражданским лётчиком-испытателем. Был отобран во вторую группу астронавтов НАСА в 1962 году.</p>
+              <p>Свой первый космический полёт Нил совершил в марте 1966 года в качестве командира корабня «Джемини-8», во время которого была выполнена первая в истории стыковка двух космических аппаратов.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="crew-modal" id="modal-aldrin" role="dialog" aria-modal="true" aria-labelledby="modal-aldrin-title">
+      <div class="crew-modal-container">
+        <a href="#crew-grid-title" class="crew-modal-close" aria-label="Закрыть">✕</a>
+        <div class="crew-modal-content">
+          <div class="crew-modal-image">
+            <img src="images/Aldrin.jpg" alt="Базз Олдрин">
+          </div>
+          <div class="crew-modal-info">
+            <span class="crew-role">Пилот лунного модуля</span>
+            <h2 id="modal-aldrin-title">Базз Олдрин</h2>
+            <h3>Edwin Eugene Aldrin Jr.</h3>
+            <p class="crew-modal-dates"><strong>Дата рождения:</strong> 20 января 1930 (возраст 96 лет)</p>
+            <div class="crew-modal-bio">
+              <p>Американский авиационный инженер, астронавт НАСА и полковник ВВС США в отставке. Выполнял обязанности пилота лунного модуля «Орёл» миссии «Аполлон-11».</p>
+              <p>Совершил три выхода в открытый космос в качестве пилота миссии «Джемини-12» в 1966 году, установив рекорд по общей продолжительности внекорабельной деятельности.</p>
+              <p>21 июля 1969 года Базз Олдрин стал вторым человеком в истории, ступившим на поверхность Луны, пробыв на ней в общей сложности чуть более двух часов. Он также провел первый сеанс причастия на Луне.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="crew-modal" id="modal-collins" role="dialog" aria-modal="true" aria-labelledby="modal-collins-title">
+      <div class="crew-modal-container">
+        <a href="#crew-grid-title" class="crew-modal-close" aria-label="Закрыть">✕</a>
+        <div class="crew-modal-content">
+          <div class="crew-modal-image">
+            <img src="images/Collins.jpg" alt="Майкл Коллинз">
+          </div>
+          <div class="crew-modal-info">
+            <span class="crew-role">Пилот командного модуля</span>
+            <h2 id="modal-collins-title">Майкл Коллинз</h2>
+            <h3>Michael Collins</h3>
+            <p class="crew-modal-dates"><strong>Годы жизни:</strong> 31 октября 1930 — 28 апреля 2021</p>
+            <div class="crew-modal-bio">
+              <p>Американский астронавт, лётчик-испытатель и военачальник, бригадный генерал ВВС США. Был пилотом командного модуля «Колумбия» миссии «Аполлон-11».</p>
+              <p>Пока Нил Армстронг и Базз Олдрин совершали посадку на Луну, Коллинз в одиночестве пилотировал командный модуль на окололунной орбите. Из-за этого журналисты часто называли его «самым одиноким человеком во Вселенной».</p>
+              <p>До миссии «Аполлон-11» Майкл совершил полёт на «Джемини-10» в 1966 году, где выполнил два успешных выхода в открытый космос. После завершения карьеры в НАСА работал директором Национального музея воздухоплавания и космонавтики в Вашингтоне.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </main>
 
   <footer class="site-footer" role="contentinfo">
     <div class="container">
-      <span class="footer-logo">Apollo 11 Archive</span>
-      <small>© 1969–2026 Apollo 11 Archive — учебный проект.</small>
+      <div class="footer-brand">
+        <span class="footer-logo">Apollo 11 Archive</span>
+        <small>© 1969–2026 Apollo 11 Archive — учебный проект.</small>
+      </div>
+      <nav class="footer-nav" aria-label="Навигация в подвале">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="crew.html">Экипаж</a></li>
+          <li><a href="tech.html">Характеристики</a></li>
+          <li><a href="gallery.html">Галерея</a></li>
+          <li><a href="logs.html">Журнал логов</a></li>
+          <li><a href="about.html">О проекте</a></li>
+        </ul>
+      </nav>
     </div>
   </footer>
 

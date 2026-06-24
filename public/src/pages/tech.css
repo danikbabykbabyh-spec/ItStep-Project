@@ -1,0 +1,61 @@
+/* ── Tech / Tables ────────────────────────────────────────────── */
+.saturn-section, .lm-section { padding: clamp(2rem, 5vw, 3.5rem) 0; }
+
+.figure-placeholder { margin-bottom: 1.5rem; }
+
+.figure-placeholder img {
+  border-radius: var(--radius-lg);
+  max-height: 420px;
+  width: 100%;
+  object-fit: contain;
+  background: var(--surface);
+}
+
+.figure-placeholder figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  color: var(--text-3);
+  text-align: center;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.tech-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 400px;
+}
+
+.tech-table th,
+.tech-table td {
+  padding: 0.8rem 1rem;
+  text-align: left;
+  font-size: 0.9rem;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+
+.tech-table thead th {
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  background: var(--accent-bg);
+}
+
+.tech-table tbody tr { transition: background var(--t1); }
+.tech-table tbody tr:hover { background: rgba(255,255,255,0.02); }
+.tech-table tbody tr:last-child th,
+.tech-table tbody tr:last-child td { border-bottom: none; }
+
+.tech-table tbody th {
+  font-size: 0.85rem;
+  color: var(--text-2);
+  font-weight: 400;
+}

@@ -1,0 +1,121 @@
+/* ── Burger Checkbox Hack ───────────────────────────────────── */
+.nav-toggle { display: none; }
+
+/* ── Header ─────────────────────────────────────────────────── */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(17,17,17,0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  height: 56px;
+}
+
+.logo {
+  font-family: var(--font-head);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+}
+.logo span { color: var(--text-2); }
+
+.site-nav { display: flex; align-items: center; }
+
+.site-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.site-nav a {
+  display: flex;
+  align-items: center;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-2);
+  border-radius: var(--radius);
+  transition: color var(--t1), background var(--t1);
+  white-space: nowrap;
+}
+
+.site-nav a:hover { color: var(--text); }
+.site-nav a.active { color: var(--text); background: var(--surface-2); }
+
+/* ── Burger ─────────────────────────────────────────────────── */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px; height: 36px;
+  background: transparent;
+  border-radius: var(--radius);
+  cursor: pointer;
+  padding: 7px;
+  border: 1px solid var(--border);
+  transition: border-color var(--t1);
+}
+
+.burger span {
+  display: block;
+  height: 2px;
+  background: var(--text-2);
+  border-radius: 2px;
+  transition: transform var(--t2) var(--ease), opacity var(--t1);
+}
+
+.burger:hover { border-color: #444; }
+
+.nav-toggle:checked ~ .site-header .burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle:checked ~ .site-header .burger span:nth-child(2) { opacity: 0; }
+.nav-toggle:checked ~ .site-header .burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── Mobile Drawer ──────────────────────────────────────────── */
+.nav-drawer {
+  position: fixed;
+  top: 57px; left: 0; right: 0;
+  z-index: 99;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 0.75rem;
+  transform: translateY(-120%);
+  opacity: 0;
+  transition: transform var(--t2) var(--ease), opacity var(--t1);
+  pointer-events: none;
+}
+
+.nav-drawer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.nav-drawer a {
+  display: block;
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-2);
+  transition: color var(--t1), background var(--t1);
+}
+
+.nav-drawer a:hover,
+.nav-drawer a.active { color: var(--text); background: var(--surface-2); }
+
+.nav-toggle:checked ~ .nav-drawer {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}

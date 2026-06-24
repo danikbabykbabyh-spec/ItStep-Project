@@ -10,9 +10,7 @@
   <title>Фотогалерея — Apollo 11 Archive</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="src/style.css">
   <link rel="icon" href="Favicon.svg" type="image/svg+xml">
   <link rel="icon" href="Favicon.ico" sizes="any">
@@ -82,9 +80,9 @@
 
           <figure>
             <a href="#lb-3">
-              <img src="images/Collins.jpg" alt="Командный модуль — Майкл Коллинз" loading="lazy">
+              <img src="images/Collins.jpg" alt="Майкл Коллинз — пилот командного модуля" loading="lazy">
             </a>
-            <figcaption>Командный модуль</figcaption>
+            <figcaption>Майкл Коллинз (Командный модуль)</figcaption>
           </figure>
 
           <figure>
@@ -136,8 +134,8 @@
 
   <div class="lightbox-item" id="lb-3">
     <a href="#" class="lightbox-close" aria-label="Закрыть">✕</a>
-    <img src="images/Collins.jpg" alt="Майкл Коллинз — командный модуль">
-    <p class="lightbox-caption">Майкл Коллинз — командный модуль</p>
+    <img src="images/Collins.jpg" alt="Майкл Коллинз — пилот командного модуля">
+    <p class="lightbox-caption">Майкл Коллинз — пилот командного модуля «Колумбия»</p>
   </div>
 
   <div class="lightbox-item" id="lb-4">
@@ -168,8 +166,20 @@
 
   <footer class="site-footer" role="contentinfo">
     <div class="container">
-      <span class="footer-logo">Apollo 11 Archive</span>
-      <small>© 1969–2026 Apollo 11 Archive — учебный проект.</small>
+      <div class="footer-brand">
+        <span class="footer-logo">Apollo 11 Archive</span>
+        <small>© 1969–2026 Apollo 11 Archive — учебный проект.</small>
+      </div>
+      <nav class="footer-nav" aria-label="Навигация в подвале">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="crew.html">Экипаж</a></li>
+          <li><a href="tech.html">Характеристики</a></li>
+          <li><a href="gallery.html">Галерея</a></li>
+          <li><a href="logs.html">Журнал логов</a></li>
+          <li><a href="about.html">О проекте</a></li>
+        </ul>
+      </nav>
     </div>
   </footer>
 

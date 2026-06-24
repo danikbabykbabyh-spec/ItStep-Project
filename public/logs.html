@@ -9,7 +9,7 @@
   <title>Журнал переговоров — Apollo 11 Archive</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="src/style.css">
   <link rel="icon" href="Favicon.svg" type="image/svg+xml">
   <link rel="icon" href="Favicon.ico" sizes="any">
@@ -61,74 +61,240 @@
     <section class="logs-section" aria-labelledby="logs-content">
       <div class="container">
         <p id="logs-content" class="intro-text">
-          <mark>20 июля 1969 года</mark> — исторический день, когда человек впервые ступил на поверхность Луны. Ниже представлена выборка переговоров, отражающих напряжение, профессионализм и решительность астронавтов при посадке.
+          <mark>Июль 1969 года</mark> — исторические дни, когда человек впервые высадился на Луну. Ниже представлены ключевые фрагменты радиопереговоров, отражающие ход миссии на разных этапах.
         </p>
 
-        <dl class="transcript">
-          <dt>
-            <time datetime="1969-07-20T20:05:00Z">20:05 МСК</time>
-            Хьюстон
-          </dt>
-          <dd class="houston">
-            Орёл, это Хьюстон. Вас слышим. Высота 500 футов, скорость снижения хорошая.
-          </dd>
+        <div class="tabs-container">
+          <!-- Скрытые радио-переключатели для вкладок -->
+          <input type="radio" id="tab-landing" name="log-tabs" class="tabs-radio" checked>
+          <input type="radio" id="tab-eva" name="log-tabs" class="tabs-radio">
+          <input type="radio" id="tab-launch" name="log-tabs" class="tabs-radio">
 
-          <dt>
-            <time datetime="1969-07-20T20:06:00Z">20:06 МСК</time>
-            Орёл (Армстронг)
-          </dt>
-          <dd class="eagle">
-            Копируем, Хьюстон. Снижаемся, все системы в норме. <mark>Видим лунную поверхность</mark>.
-          </dd>
+          <!-- Навигация по вкладкам -->
+          <div class="tab-nav" role="tablist">
+            <label for="tab-landing" class="tab-label" role="tab" aria-controls="panel-landing">Посадка на Луну</label>
+            <label for="tab-eva" class="tab-label" role="tab" aria-controls="panel-eva">Первые шаги</label>
+            <label for="tab-launch" class="tab-label" role="tab" aria-controls="panel-launch">Старт с Луны</label>
+          </div>
 
-          <dt>
-            <time datetime="1969-07-20T20:07:00Z">20:07 МСК</time>
-            Хьюстон
-          </dt>
-          <dd class="houston">
-            Орёл, давайте помедленнее. Следите за горючим. У вас остаётся примерно 2 минуты до минимума.
-          </dd>
+          <!-- Контент панелей -->
+          <div class="tab-panels">
+            <!-- Панель 1: Посадка -->
+            <div id="panel-landing" class="tab-panel panel-landing" role="tabpanel">
+              <dl class="transcript">
+                <dt>
+                  <time datetime="1969-07-20T20:05:00Z">20:05 UTC</time>
+                  Хьюстон
+                </dt>
+                <dd class="houston">
+                  Орёл, это Хьюстон. Вас слышим. Высота 500 футов, скорость снижения хорошая.
+                </dd>
 
-          <dt>
-            <time datetime="1969-07-20T20:08:00Z">20:08 МСК</time>
-            Орёл (Армстронг)
-          </dt>
-          <dd class="eagle">
-            Хьюстон, контрольный свет горючего включился. Требуется посадка в течение одной минуты, иначе придётся абортировать.
-          </dd>
+                <dt>
+                  <time datetime="1969-07-20T20:06:00Z">20:06 UTC</time>
+                  Орёл (Олдрин)
+                </dt>
+                <dd class="eagle">
+                  Поняли, Хьюстон. Снижаемся. 300 футов, скорость снижения 3,5 фута в секунду.
+                </dd>
 
-          <dt>
-            <time datetime="1969-07-20T20:09:00Z">20:09 МСК</time>
-            Хьюстон
-          </dt>
-          <dd class="houston">
-            Орёл, <mark>продолжайте спуск</mark>. Время ещё есть. Все системы работают нормально.
-          </dd>
+                <dt>
+                  <time datetime="1969-07-20T20:07:00Z">20:07 UTC</time>
+                  Хьюстон
+                </dt>
+                <dd class="houston">
+                  Орёл, внимание. У вас остаётся около двух минут до критического уровня топлива.
+                </dd>
 
-          <dt>
-            <time datetime="1969-07-20T20:10:00Z">20:10 МСК</time>
-            Орёл (Олдрин)
-          </dt>
-          <dd class="eagle">
-            Контакт… контакт! Маячки горючего включены. Скорость вниз 2 фута в секунду.
-          </dd>
+                <dt>
+                  <time datetime="1969-07-20T20:08:00Z">20:08 UTC</time>
+                  Орёл (Олдрин)
+                </dt>
+                <dd class="eagle">
+                  Загорелся индикатор остатка топлива (Quantity Light). Высота 100 футов.
+                </dd>
 
-          <dt>
-            <time datetime="1969-07-20T20:11:00Z">20:11 МСК</time>
-            Орёл (Армстронг)
-          </dt>
-          <dd class="eagle">
-            <mark>Спокойно, спускаемся</mark>. Выключаю двигатель. Модуль на поверхности.
-          </dd>
+                <dt>
+                  <time datetime="1969-07-20T20:09:00Z">20:09 UTC</time>
+                  Хьюстон
+                </dt>
+                <dd class="houston">
+                  Орёл, это Хьюстон. <mark>Осталось 60 секунд</mark>.
+                </dd>
 
-          <dt>
-            <time datetime="1969-07-20T20:17:00Z">20:17 МСК</time>
-            Хьюстон
-          </dt>
-          <dd class="houston">
-            Орёл, Хьюстон. Подтверждаем: вы на поверхности Луны. Вся планета вас слышит! Отличная работа!
-          </dd>
-        </dl>
+                <dt>
+                  <time datetime="1969-07-20T20:10:00Z">20:10 UTC</time>
+                  Хьюстон
+                </dt>
+                <dd class="houston">
+                  Осталось 30 секунд.
+                </dd>
+
+                <dt>
+                  <time datetime="1969-07-20T20:11:00Z">20:11 UTC</time>
+                  Орёл (Олдрин)
+                </dt>
+                <dd class="eagle">
+                  Поднимаем пыль... <mark>Есть контакт!</mark> (Загорелся сигнал контакта с грунтом).
+                </dd>
+
+                <dt>
+                  <time datetime="1969-07-20T20:12:00Z">20:12 UTC</time>
+                  Орёл (Армстронг)
+                </dt>
+                <dd class="eagle">
+                  Выключаю двигатель. Модуль на поверхности.
+                </dd>
+
+                <dt>
+                  <time datetime="1969-07-20T20:17:00Z">20:17 UTC</time>
+                  Орёл (Армстронг)
+                </dt>
+                <dd class="eagle">
+                  Хьюстон, говорит База Спокойствия. <mark>«Орёл» прилунился</mark>.
+                </dd>
+
+                <dt>
+                  <time datetime="1969-07-20T20:18:00Z">20:18 UTC</time>
+                  Хьюстон
+                </dt>
+                <dd class="houston">
+                  Роджер, Спокойствие. Мы подтверждаем прилунение. Вы заставили нас изрядно понервничать, но теперь мы снова дышим. Спасибо!
+                </dd>
+              </dl>
+            </div>
+
+            <!-- Панель 2: Шаги -->
+            <div id="panel-eva" class="tab-panel panel-eva" role="tabpanel">
+              <dl class="transcript">
+                <dt>
+                  <time datetime="1969-07-21T02:51:00Z">02:51 UTC</time>
+                  Орёл (Армстронг)
+                </dt>
+                <dd class="eagle">
+                  Хьюстон, я на площадке. Выходная лестница развёрнута.
+                </dd>
+
+                <dt>
+                  <time datetime="1969-07-21T02:53:00Z">02:53 UTC</time>
+                  Орёл (Армстронг)
+                </dt>
+                <dd class="eagle">
+                  Я собираюсь сойти с лунного модуля. Телекамера работает хорошо, передаёт изображение.
+                </dd>
+
+                <dt>
+                  <time datetime="1969-07-21T02:55:00Z">02:55 UTC</time>
+                  Орёл (Армстронг)
+                </dt>
+                <dd class="eagle">
+                  Я стою на посадочной опоре. Опоры вдавились в грунт всего на один-два дюйма, хотя лунная поверхность кажется очень мелкой при приближении.
+                </dd>
+
+                <dt>
+                  <time datetime="1969-07-21T02:56:00Z">02:56 UTC</time>
+                  Орёл (Армстронг)
+                </dt>
+                <dd class="eagle">
+                  Я собираюсь сойти с посадочной опоры... <mark>Это один маленький шаг для человека, но гигантский скачок для всего человечества</mark>.
+                </dd>
+
+                <dt>
+                  <time datetime="1969-07-21T02:57:00Z">02:57 UTC</time>
+                  Орёл (Армстронг)
+                </dt>
+                <dd class="eagle">
+                  Поверхность очень мелкая и порошкообразная. Я легко могу поднять её носком обуви. Я вижу свои следы на пыли. Шаги даются легко.
+                </dd>
+
+                <dt>
+                  <time datetime="1969-07-21T03:15:00Z">03:15 UTC</time>
+                  Орёл (Олдрин)
+                </dt>
+                <dd class="eagle">
+                  Спускаюсь... Красиво! Очень красиво. <mark>Великолепная пустыня</mark>.
+                </dd>
+
+                <dt>
+                  <time datetime="1969-07-21T03:16:00Z">03:16 UTC</time>
+                  Хьюстон
+                </dt>
+                <dd class="houston">
+                  Орёл, это Хьюстон. Вас отлично видно. Телеметрия ранцев жизнеобеспечения в норме. Начинайте сбор образцов.
+                </dd>
+              </dl>
+            </div>
+
+            <!-- Панель 3: Старт -->
+            <div id="panel-launch" class="tab-panel panel-launch" role="tabpanel">
+              <dl class="transcript">
+                <dt>
+                  <time datetime="1969-07-21T17:53:00Z">17:53 UTC</time>
+                  Орёл (Олдрин)
+                </dt>
+                <dd class="eagle">
+                  9, 8, 7, 6, 5... переход в режим старта... зажигание.
+                </dd>
+
+                <dt>
+                  <time datetime="1969-07-21T17:54:00Z">17:54 UTC</time>
+                  Орёл (Олдрин)
+                </dt>
+                <dd class="eagle">
+                  <mark>Взлёт! Мы летим!</mark>
+                </dd>
+
+                <dt>
+                  <time datetime="1969-07-21T17:54:30Z">17:54 UTC</time>
+                  Орёл (Олдрин)
+                </dt>
+                <dd class="eagle">
+                  Скорость 26, 36 футов в секунду. Очень плавный подъём. Очень тихо.
+                </dd>
+
+                <dt>
+                  <time datetime="1969-07-21T17:55:00Z">17:55 UTC</time>
+                  Орёл (Олдрин)
+                </dt>
+                <dd class="eagle">
+                  Наклон. Высота 150 футов. Подъём 40 футов в секунду. Всё стабильно.
+                </dd>
+
+                <dt>
+                  <time datetime="1969-07-21T17:55:30Z">17:55 UTC</time>
+                  Орёл (Олдрин)
+                </dt>
+                <dd class="eagle">
+                  Высота 1000 футов. Всё работает в штатном режиме.
+                </dd>
+
+                <dt>
+                  <time datetime="1969-07-21T17:56:00Z">17:56 UTC</time>
+                  Хьюстон
+                </dt>
+                <dd class="houston">
+                  Орёл, это Хьюстон. Видим вас на радаре. Траектория отличная, параметры двигателя в норме!
+                </dd>
+
+                <dt>
+                  <time datetime="1969-07-21T17:57:00Z">17:57 UTC</time>
+                  Орёл (Армстронг)
+                </dt>
+                <dd class="eagle">
+                  Поняли вас, Хьюстон. Выходим на промежуточную орбиту для встречи и стыковки с командным модулем «Колумбия».
+                </dd>
+
+                <dt>
+                  <time datetime="1969-07-21T18:00:00Z">18:00 UTC</time>
+                  Хьюстон
+                </dt>
+                <dd class="houston">
+                  Принято, Орёл. Поздравляем с успешным взлётом с поверхности Луны! Возвращайтесь домой.
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -136,8 +302,20 @@
 
   <footer class="site-footer" role="contentinfo">
     <div class="container">
-      <span class="footer-logo">Apollo 11 Archive</span>
-      <small>© 1969–2026 Apollo 11 Archive — учебный проект.</small>
+      <div class="footer-brand">
+        <span class="footer-logo">Apollo 11 Archive</span>
+        <small>© 1969–2026 Apollo 11 Archive — учебный проект.</small>
+      </div>
+      <nav class="footer-nav" aria-label="Навигация в подвале">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="crew.html">Экипаж</a></li>
+          <li><a href="tech.html">Характеристики</a></li>
+          <li><a href="gallery.html">Галерея</a></li>
+          <li><a href="logs.html">Журнал логов</a></li>
+          <li><a href="about.html">О проекте</a></li>
+        </ul>
+      </nav>
     </div>
   </footer>
 
