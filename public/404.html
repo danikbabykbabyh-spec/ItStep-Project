@@ -20,7 +20,6 @@
 
 <body>
 
-  <!-- CSS-only burger toggle -->
   <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
 
   <header class="site-header" role="banner">
@@ -44,7 +43,6 @@
     </div>
   </header>
 
-  <!-- Mobile drawer -->
   <nav class="nav-drawer" aria-label="Мобильная навигация">
     <ul>
       <li><a href="index.html">Главная</a></li>
@@ -60,25 +58,18 @@
     <section class="error-page" aria-labelledby="error-title">
       <div class="container error-container">
 
-        <!-- Floating astronaut illustration -->
         <div class="error-astronaut" aria-hidden="true">
           <svg viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg" class="astronaut-svg">
-            <!-- Tether line -->
             <path d="M100 10 Q 60 50, 80 90 Q 100 130, 90 160" stroke="rgba(99,222,219,0.25)" stroke-width="1.5"
               stroke-dasharray="6 4" fill="none" />
-            <!-- Backpack -->
             <rect x="75" y="60" width="50" height="65" rx="8" fill="#141720" stroke="rgba(99,222,219,0.3)"
               stroke-width="1.5" />
             <rect x="80" y="65" width="40" height="14" rx="3" fill="rgba(99,222,219,0.08)"
               stroke="rgba(99,222,219,0.15)" stroke-width="1" />
-            <!-- Helmet -->
             <ellipse cx="100" cy="48" rx="28" ry="26" fill="#0f1117" stroke="rgba(99,222,219,0.35)"
               stroke-width="1.5" />
-            <!-- Visor -->
             <ellipse cx="100" cy="48" rx="20" ry="17" fill="url(#visor-gradient)" opacity="0.9" />
-            <!-- Visor shine -->
             <ellipse cx="92" cy="42" rx="6" ry="4" fill="rgba(99,222,219,0.25)" transform="rotate(-15 92 42)" />
-            <!-- Arms -->
             <path d="M75 75 Q 55 85, 50 110 Q 48 120, 55 125" stroke="#141720" stroke-width="12" stroke-linecap="round"
               fill="none" />
             <path d="M75 75 Q 55 85, 50 110 Q 48 120, 55 125" stroke="rgba(99,222,219,0.2)" stroke-width="1.5"
@@ -87,10 +78,8 @@
               stroke-linecap="round" fill="none" />
             <path d="M125 75 Q 145 80, 155 100 Q 160 115, 150 125" stroke="rgba(99,222,219,0.2)" stroke-width="1.5"
               stroke-linecap="round" fill="none" />
-            <!-- Gloves -->
             <circle cx="55" cy="127" r="7" fill="#0f1117" stroke="rgba(99,222,219,0.25)" stroke-width="1.5" />
             <circle cx="150" cy="127" r="7" fill="#0f1117" stroke="rgba(99,222,219,0.25)" stroke-width="1.5" />
-            <!-- Legs -->
             <path d="M88 125 Q 80 155, 75 180 Q 73 190, 65 195" stroke="#141720" stroke-width="11"
               stroke-linecap="round" fill="none" />
             <path d="M88 125 Q 80 155, 75 180 Q 73 190, 65 195" stroke="rgba(99,222,219,0.2)" stroke-width="1.5"
@@ -99,11 +88,9 @@
               stroke-linecap="round" fill="none" />
             <path d="M112 125 Q 120 155, 125 180 Q 127 190, 135 195" stroke="rgba(99,222,219,0.2)" stroke-width="1.5"
               stroke-linecap="round" fill="none" />
-            <!-- Boots -->
             <ellipse cx="63" cy="198" rx="10" ry="6" fill="#0f1117" stroke="rgba(99,222,219,0.25)" stroke-width="1.5" />
             <ellipse cx="137" cy="198" rx="10" ry="6" fill="#0f1117" stroke="rgba(99,222,219,0.25)"
               stroke-width="1.5" />
-            <!-- NASA patch -->
             <circle cx="100" cy="90" r="8" fill="rgba(99,222,219,0.06)" stroke="rgba(99,222,219,0.2)"
               stroke-width="1" />
             <text x="100" y="93" text-anchor="middle" font-size="5" fill="rgba(99,222,219,0.5)"
@@ -118,21 +105,18 @@
           </svg>
         </div>
 
-        <!-- Error code -->
         <div class="error-code" aria-hidden="true">
           <span class="error-digit" style="--i:0">4</span>
           <span class="error-digit error-zero" style="--i:1">0</span>
           <span class="error-digit" style="--i:2">4</span>
         </div>
 
-        <!-- Error message -->
         <h1 id="error-title" class="error-heading">Связь потеряна</h1>
         <p class="error-sub">
           <span class="error-mono">SIGNAL_LOST</span> — запрашиваемая страница не найдена.
           Возможно, она осталась на лунной орбите.
         </p>
 
-        <!-- CTA buttons -->
         <div class="error-cta">
           <a class="btn btn-primary" href="index.html">🏠 Вернуться на базу</a>
           <a class="btn btn-ghost" href="gallery.html">📸 Галерея</a>
@@ -140,7 +124,6 @@
 
       </div>
 
-      <!-- Floating particles -->
       <div class="error-particles" aria-hidden="true">
         <span class="particle" style="--x:15%;--y:20%;--dur:6s;--delay:0s;--size:3px"></span>
         <span class="particle" style="--x:85%;--y:15%;--dur:8s;--delay:1s;--size:2px"></span>
