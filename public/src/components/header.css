@@ -21,6 +21,9 @@
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-family: var(--font-head);
   font-size: 0.95rem;
   font-weight: 700;
@@ -28,6 +31,12 @@
   white-space: nowrap;
 }
 .logo span { color: var(--text-2); }
+
+.logo-icon {
+  display: block;
+  border-radius: var(--radius-sm, 4px);
+  object-fit: contain;
+}
 
 .site-nav { display: flex; align-items: center; }
 
