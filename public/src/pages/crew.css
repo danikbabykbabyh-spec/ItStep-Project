@@ -1,4 +1,3 @@
-/* ── Crew ────────────────────────────────────────────────────── */
 .crew-section { padding: clamp(2.5rem, 6vw, 4.5rem) 0; }
 .crew-section .section-lead { margin-bottom: 1.5rem; }
 
@@ -93,7 +92,6 @@
   line-height: 1.6;
 }
 
-/* ── Crew Modals ────────────────────────────────────────────── */
 .crew-modal {
   position: fixed;
   inset: 0;
@@ -216,12 +214,11 @@
   color: var(--text-2);
 }
 
-/* Responsive styles for modal */
 @media (max-width: 768px) {
   .crew-modal-content {
     flex-direction: column;
   }
-  
+
   .crew-modal-image {
     flex: none;
     max-width: 100%;
@@ -230,14 +227,13 @@
     border-right: none;
     border-bottom: 1px solid var(--border);
   }
-  
+
   .crew-modal-info {
     padding: 1.5rem;
     max-height: 60vh;
   }
-  
+
   .crew-modal-info h2 {
     font-size: 1.5rem;
   }
 }
-

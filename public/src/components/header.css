@@ -1,7 +1,5 @@
-/* ── Burger Checkbox Hack ───────────────────────────────────── */
 .nav-toggle { display: none; }
 
-/* ── Header ─────────────────────────────────────────────────── */
 .site-header {
   position: sticky;
   top: 0;
@@ -61,7 +59,6 @@
 .site-nav a:hover { color: var(--text); }
 .site-nav a.active { color: var(--text); background: var(--surface-2); }
 
-/* ── Burger ─────────────────────────────────────────────────── */
 .burger {
   display: none;
   flex-direction: column;
@@ -90,7 +87,6 @@
 .nav-toggle:checked ~ .site-header .burger span:nth-child(2) { opacity: 0; }
 .nav-toggle:checked ~ .site-header .burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* ── Mobile Drawer ──────────────────────────────────────────── */
 .nav-drawer {
   position: fixed;
   top: 57px; left: 0; right: 0;

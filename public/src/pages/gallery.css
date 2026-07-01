@@ -1,4 +1,3 @@
-/* ── Gallery ──────────────────────────────────────────────────── */
 .gallery-section { padding: clamp(2.5rem, 6vw, 4.5rem) 0; }
 
 .gallery-grid {
@@ -36,7 +35,6 @@
   .gallery-grid figure:first-child img { height: 300px; }
 }
 
-/* ── CSS Lightbox ────────────────────────────────────────────── */
 .lightbox-item {
   position: fixed;
   inset: 0;

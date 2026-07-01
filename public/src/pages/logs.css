@@ -1,4 +1,3 @@
-/* ── Logs / Transcript ────────────────────────────────────────── */
 .intro-text {
   max-width: 65ch;
   color: var(--text-2);
@@ -57,7 +56,6 @@
 .transcript dd.houston { border-left-color: var(--text-3); }
 .transcript dd.eagle   { border-left-color: var(--accent); }
 
-/* ── Log excerpt (index) ─────────────────────────────────────── */
 .log-excerpt {
   padding: 1.25rem 1.5rem;
   border-radius: var(--radius-lg);
@@ -94,7 +92,6 @@
   font-size: 0.9rem;
 }
 
-/* ── Tabs Styling ──────────────────────────────────────────────── */
 .tabs-container {
   margin-top: 2rem;
 }
@@ -110,7 +107,7 @@
   margin-bottom: 2rem;
   padding-bottom: 0.5rem;
   overflow-x: auto;
-  scrollbar-width: none; /* Hide scrollbar for clean design */
+  scrollbar-width: none;
 }
 
 .tab-nav::-webkit-scrollbar {
@@ -135,7 +132,6 @@
   background: var(--surface);
 }
 
-/* Connect active state */
 #tab-landing:checked ~ .tab-nav label[for="tab-landing"],
 #tab-eva:checked ~ .tab-nav label[for="tab-eva"],
 #tab-launch:checked ~ .tab-nav label[for="tab-launch"] {
@@ -144,7 +140,6 @@
   border-color: rgba(99, 222, 219, 0.2);
 }
 
-/* Hide panels by default */
 .tab-panel {
   display: none;
   animation: tabFadeIn 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -161,7 +156,6 @@
   }
 }
 
-/* Show correct panel */
 #tab-landing:checked ~ .tab-panels .panel-landing,
 #tab-eva:checked ~ .tab-panels .panel-eva,
 #tab-launch:checked ~ .tab-panels .panel-launch {
